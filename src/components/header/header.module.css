@@ -1,13 +1,13 @@
 .header {
     width: 100%;
     height: 80px;
-    background-color: #1C1C1E;
+    background-color: var(--preto);
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-around;
     padding: 0 20px;
-    color: #F2F2F7;
+    color: var(--branco);
     font-weight: bold;
 }
 
