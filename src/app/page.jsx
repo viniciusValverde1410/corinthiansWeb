@@ -13,8 +13,7 @@ export default function Home() {
             Paulista
           </h1>
           <p className={styles.heroSubtitle}>
-            Mais que um clube, uma paixão. Tradição, garra e o maior time do
-            Brasil.
+            Mais de 114 anos de muita história e tradição do time do povo em um só lugar!
           </p>
           <div className={styles.heroButtons}>
             <a href="/historia" className={styles.heroButton}>
@@ -30,6 +29,13 @@ export default function Home() {
               👥 Jogadores
             </a>
           </div>
+        </div>
+      </section>
+
+      <section className={styles.navigationSection}>
+        <div className={styles.navigationSectionTitle}>
+          <h2>Conheça o Maior Clube do Brasil</h2>
+          <p>Descubra tudo sobre o Timão</p>
         </div>
       </section>
     </div>

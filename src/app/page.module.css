@@ -164,7 +164,54 @@
     border: 2px solid var(--branco);
 }
 
-.heroButtonPrimary:hover {
-    background: var(--branco);
+.heroButtonWhite:hover {
+    background: rgba(224, 220, 220, 0.555);
     transform: scale(1.05);
 }   
+
+.navigationSection {
+    width: 100%;
+    height: 40rem;
+    background-color: var(--branco);
+}
+
+.navigationSectionTitle {
+    padding: 3rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.navigationSectionTitle h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #000;
+    margin: 0;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navigationSectionTitle h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+    height: 3px;
+    background: linear-gradient(90deg, #dc3545, #000000, #dc3545);
+    border-radius: 2px;
+}
+
+.navigationSectionTitle p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin: 0;
+    font-weight: 400;
+    font-style: italic;
+}
