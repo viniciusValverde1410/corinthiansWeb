@@ -12,11 +12,6 @@
 - `#2C2C2E` - Cinza escuro Apple
 - `#3A3A3C` - Cinza médio Apple
 
-## Brancos Modernos
-- `#FAFAFA` - Branco suave
-- `#F8F9FA` - Branco Google
-- `#FDFDFD` - Quase branco
-
 ## Combinação Recomendada
 - **Background:** `#FAFAFA`
 - **Textos escuros:** `#1C1C1E`
