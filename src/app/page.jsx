@@ -1,8 +1,48 @@
+"use client";
+
 import styles from "./page.module.css";
 import { Carousel } from "antd";
 import Image from "next/image";
+import { useForm, ValidationError } from "@formspree/react";
 
 export default function Home() {
+  function ContactForm() {
+    const [state, handleSubmit] = useForm("xgvnwwyn");
+    if (state.succeeded) {
+      return <p>✅ Obrigado por entrar em contato! Responderemos o mais breve possível.</p>;
+    }
+    return (
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="email">📧 Email</label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          placeholder="Digite seu melhor email..."
+          required
+        />
+        <ValidationError prefix="Email" field="email" errors={state.errors} />
+
+        <label htmlFor="message">💬 Mensagem</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Deixe sua mensagem..."
+          required
+        />
+        <ValidationError
+          prefix="Message"
+          field="message"
+          errors={state.errors}
+        />
+
+        <button type="submit" disabled={state.submitting}>
+          {state.submitting ? "⚽ Enviando..." : " Enviar Mensagem"}
+        </button>
+      </form>
+    );
+  }
+
   return (
     <div>
       <section className={styles.heroSection}>
@@ -128,6 +168,22 @@ export default function Home() {
               ⛊ Explorar o Clube
             </a>
           </div>
+        </div>
+      </section>
+
+      <section className={styles.transitionSection}></section>
+
+      <section className={styles.formSection}>
+        <div className={styles.formSectionTitle}>
+          <h1>Entre em contato!</h1>
+          <p>
+            Fique a vontade para relatar qualquer problema, sugestão ou apenas
+            deixar uma mensagem.
+          </p>
+        </div>
+
+        <div className={styles.formContainer}>
+          <ContactForm />
         </div>
       </section>
     </div>

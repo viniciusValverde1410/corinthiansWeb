@@ -394,3 +394,209 @@
 .carouselImage:hover {
     filter: brightness(0.7) saturate(1);
 }
+
+.transitionSection {
+    width: 100%;
+    height: 5rem;
+    background: linear-gradient(to bottom,
+            #8e8e9341 0%,
+            rgba(142, 142, 147, 0.25) 25%,
+            rgba(142, 142, 147, 0.1) 50%,
+            rgba(242, 242, 247, 0.7) 75%,
+            #F2F2F7 100%);
+}
+
+.formSection {
+    width: 100%;
+    height: 45rem;
+    background-color: var(--branco);
+}
+
+.formSectionTitle {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--preto);
+    font-weight: bold;
+}
+
+.formSectionTitle h1 {
+    font-size: 3rem;
+    padding: 1rem;
+    font-weight: 900;
+    color: #000;
+    margin: 0;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.formSectionTitle p {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin: 0;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.formContainer {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.formContainer form {
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 20px;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.1),
+        0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.formContainer form:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.15),
+        0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.formContainer label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+}
+
+.formContainer input,
+.formContainer textarea {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.formContainer input:focus,
+.formContainer textarea:focus {
+    outline: none;
+    border-color: #000000;
+    background: #f8f9fa;
+    transform: scale(1.02);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.formContainer textarea {
+    min-height: 120px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.formContainer button {
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+    color: #ffffff;
+    padding: 1.2rem 2.5rem;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.formContainer button:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #333333 0%, #000000 100%);
+}
+
+.formContainer button:active {
+    transform: translateY(-1px);
+}
+
+.formContainer button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.formContainer button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.formContainer button:hover::before {
+    left: 100%;
+}
+
+/* Mensagem de sucesso */
+.formContainer p {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #28a745;
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 2px solid #b8dabd;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .formContainer form {
+        max-width: 90%;
+        padding: 2rem;
+        margin: 0 1rem;
+    }
+
+    .formContainer label {
+        font-size: 1rem;
+    }
+
+    .formContainer input,
+    .formContainer textarea {
+        padding: 0.8rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .formContainer button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+}
