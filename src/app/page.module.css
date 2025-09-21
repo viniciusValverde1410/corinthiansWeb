@@ -36,13 +36,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, 
-        rgba(0, 0, 0, 0.8) 0%, 
-        rgba(0, 0, 0, 0.6) 25%, 
-        rgba(0, 0, 0, 0.3) 50%, 
-        rgba(0, 0, 0, 0.1) 70%, 
-        transparent 85%
-    );
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0.6) 25%,
+            rgba(0, 0, 0, 0.3) 50%,
+            rgba(0, 0, 0, 0.1) 70%,
+            transparent 85%);
     z-index: 1;
 }
 
@@ -107,7 +106,7 @@
     position: relative;
     display: inline-block;
     transform: scale(1.05);
-    text-shadow: 
+    text-shadow:
         3px 3px 6px rgba(0, 0, 0, 0.9),
         1px 1px 0px rgba(139, 0, 0, 1),
         -1px -1px 0px rgba(139, 0, 0, 1),
@@ -135,8 +134,8 @@
 .heroButton {
     width: 140px;
     height: 50px;
-    border-radius: 25px;
-    border: 2px solid var(--branco);
+    border-radius: 14px;
+    border: 1px solid var(--branco);
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     color: var(--branco);
@@ -167,7 +166,44 @@
 .heroButtonWhite:hover {
     background: rgba(224, 220, 220, 0.555);
     transform: scale(1.05);
+}
+
+.atrativeSection {
+    width: 100%;
+    height: 40rem;
+    background-color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
 }   
+
+.bannerContainer {
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+
+.bannerImage {
+    filter: blur(1.5px) brightness(0.35) saturate(0.9);
+}
+
+.bannerText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 52%;
+    transform: translate(-50%, -50%);
+    color: var(--branco);
+    font-size: 2.7rem;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 0 1rem;
+    text-transform: uppercase;
+}
 
 .navigationSection {
     width: 100%;
@@ -176,13 +212,13 @@
 }
 
 .navigationSectionTitle {
-    padding: 3rem 2rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
     position: relative;
+    height: 20%;
 }
 
 .navigationSectionTitle h2 {
@@ -214,4 +250,32 @@
     margin: 0;
     font-weight: 400;
     font-style: italic;
+}
+
+.navigationSectionContent {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2rem;
+}
+
+.navigationCarousel {
+    width: 50%;
+    height: 80%;
+}
+
+.contentCarousel {
+    margin: 0;
+    height: 400px;
+    color: var(--branco);
+    line-height: 40px;
+    text-align: center;
+    background: #364d79;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
 }
