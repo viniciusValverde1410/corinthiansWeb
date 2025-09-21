@@ -215,9 +215,7 @@
     text-align: center;
     text-shadow:
         3px 3px 0px rgba(0, 0, 0, 1),
-        4px 4px 8px rgba(0, 0, 0, 0.8),
-        1px 1px 0px rgba(220, 53, 69, 0.7),
-        -1px -1px 0px rgba(220, 53, 69, 0.7);
+        4px 4px 8px rgba(0, 0, 0, 0.8);
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 1.1;
@@ -264,7 +262,6 @@
     transform: translateX(-50%);
     width: 1000px;
     height: 3px;
-    background: linear-gradient(90deg, #dc3545, #000000, #dc3545);
     border-radius: 2px;
 }
 
@@ -576,17 +573,16 @@
     left: 100%;
 }
 
-/* Mensagem de sucesso */
 .formContainer p {
     text-align: center;
     font-size: 1.3rem;
     font-weight: 600;
-    color: #28a745;
-    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    color: #0066cc;
+    background: linear-gradient(135deg, #d4edda 0%, #c3c5e6 100%);
     padding: 1.5rem;
     border-radius: 12px;
     border: 2px solid #b8dabd;
-    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
@@ -609,5 +605,268 @@
     .formContainer button {
         padding: 1rem 2rem;
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .heroSection {
+        padding-left: 2rem;
+        height: 30rem;
+    }
+
+    .containerHero {
+        width: 60%;
+        padding: 1.5rem;
+    }
+
+    .heroTitle {
+        font-size: 3.2rem;
+    }
+
+    .heroTitleHighlight {
+        font-size: 3.4rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1.1rem;
+    }
+
+    .navigationSectionContent {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .navigationCarousel,
+    .navigationSectionText {
+        width: 100%;
+        height: auto;
+    }
+
+    .navigationSectionText {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .callToActionTitle {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        height: 28rem;
+        padding: 1rem;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .containerHero {
+        width: 90%;
+        padding: 1.5rem;
+        align-items: flex-start;
+    }
+
+    .heroTitle {
+        font-size: 2.2rem;
+        text-align: left;
+        line-height: 1.1;
+        margin-bottom: 0.5rem;
+    }
+
+    .heroTitleHighlight {
+        font-size: 2.4rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1rem;
+        text-align: left;
+        margin-bottom: 1.5rem;
+        line-height: 1.4;
+    }
+
+    .heroButtons {
+        flex-direction: row;
+        gap: 0.8rem;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .heroButton {
+        width: auto;
+        padding: 0.8rem 1rem;
+        font-size: 0.75rem;
+        min-width: 85px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .atrativeSection {
+        height: 30rem;
+    }
+
+    .bannerContainer {
+        height: 60%;
+    }
+
+    .bannerImage {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .bannerText {
+        font-size: 1.8rem;
+        width: 85%;
+        letter-spacing: 0.5px;
+    }
+
+    .navigationSection {
+        height: auto;
+        min-height: 50rem;
+        padding: 2rem 0;
+    }
+
+    .navigationSectionTitle h1 {
+        font-size: 2.2rem;
+        padding: 0.5rem;
+    }
+
+    .navigationSectionTitle p {
+        font-size: 1rem;
+    }
+
+    .navigationSectionContent {
+        flex-direction: column;
+        height: auto;
+        gap: 3rem;
+        padding: 1rem;
+    }
+
+    .navigationCarousel {
+        width: 100%;
+        height: 300px;
+    }
+
+    .contentCarousel {
+        height: 300px;
+    }
+
+    .carouselText {
+        width: 80%;
+        height: auto;
+        top: 80%;
+        padding: 1rem;
+    }
+
+    .carouselText h1 {
+        font-size: 1.2rem;
+    }
+
+    .carouselText h2 {
+        font-size: 0.9rem;
+    }
+
+    .navigationSectionText {
+        width: 100%;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    .callToActionTitle {
+        font-size: 1.8rem;
+    }
+
+    .callToActionSubtitle {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .clubButton {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+        align-self: center;
+    }
+
+    .formSection {
+        height: auto;
+        min-height: 35rem;
+        padding: 2rem 0;
+    }
+
+    .formSectionTitle h1 {
+        font-size: 2.2rem;
+        padding: 0.5rem;
+    }
+
+    .formSectionTitle p {
+        font-size: 1rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .heroSection {
+        height: 22rem;
+        padding: 0.5rem;
+    }
+
+    .heroTitle {
+        font-size: 1.8rem;
+    }
+
+    .heroTitleHighlight {
+        font-size: 2rem;
+    }
+
+    .heroSubtitle {
+        font-size: 0.9rem;
+    }
+
+    .heroButtons {
+        flex-direction: row;
+    }
+
+    .heroButton {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.8rem;
+    }
+
+    .bannerText {
+        font-size: 1.4rem;
+        width: 90%;
+    }
+
+    .navigationSectionTitle h1 {
+        font-size: 1.8rem;
+    }
+
+    .callToActionTitle {
+        font-size: 1.5rem;
+    }
+
+    .callToActionSubtitle {
+        font-size: 0.9rem;
+    }
+
+    .clubButton {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .formSectionTitle h1 {
+        font-size: 1.8rem;
+    }
+
+    .carouselText h1 {
+        font-size: 1rem;
+    }
+
+    .carouselText h2 {
+        font-size: 0.8rem;
     }
 }
