@@ -869,4 +869,9 @@
     .carouselText h2 {
         font-size: 0.8rem;
     }
+
+    .formSectionTitle p {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
 }
