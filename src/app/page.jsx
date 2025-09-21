@@ -9,7 +9,12 @@ export default function Home() {
   function ContactForm() {
     const [state, handleSubmit] = useForm("xgvnwwyn");
     if (state.succeeded) {
-      return <p>✅ Obrigado por entrar em contato! Responderemos o mais breve possível.</p>;
+      return (
+        <p>
+          ✅ Obrigado por entrar em contato! Responderemos o mais breve
+          possível.
+        </p>
+      );
     }
     return (
       <form onSubmit={handleSubmit}>
@@ -86,7 +91,7 @@ export default function Home() {
           />
 
           <h2 className={styles.bannerText}>
-            TUDO DO ULTIMO BRASILEIRO A CONQUISTAR O MUNDO!
+            TUDO DO ÚLTIMO BRASILEIRO A CONQUISTAR O MUNDO!
           </h2>
         </div>
       </section>
