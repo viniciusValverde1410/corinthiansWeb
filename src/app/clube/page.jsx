@@ -189,8 +189,22 @@ export default function Clube() {
                 />
               </div>
             </div>
+
+            <div>
+              <div className={styles.contentCarousel}>
+                <Image
+                  src="/images/arena6.png"
+                  alt="Neo Química Arena - NFL"
+                  className={styles.carouselImage}
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+            </div>
           </Carousel>
+
         </div>{" "}
+
         <div className={styles.stadiumInfo}>
           <div className={styles.infoGrid}>
             <div className={styles.infoItem}>
