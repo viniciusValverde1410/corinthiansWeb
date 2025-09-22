@@ -1,5 +1,6 @@
 import styles from "./clube.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import { Carousel } from "antd";
 
 export default function Clube() {
@@ -26,6 +27,93 @@ export default function Clube() {
               height={180}
               priority
             />
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.uniformsSection}>
+        <div className={styles.uniformsContainer}>
+          <div className={styles.uniformsContent}>
+            <div className={styles.uniformsTextSide}>
+              <h2 className={styles.bannerText}>MANTO SAGRADO</h2>
+              <p className={styles.subtitle}>Tradição que representa a Fiel</p>
+              <p className={styles.uniformsDescription}>
+                Mais que um uniforme, é o símbolo da Fiel Torcida. O manto
+                alvinegro carrega a alma do bando de loucos, representa a luta,
+                a garra e a paixão incondicional dos corinthianos. A atual
+                camisa especial homenageia o histórico Mundial de Clubes de
+                2000, o primeiro mundial do Timão, quando conquistou o mundo e
+                eternizou seu nome na história do futebol.
+              </p>
+              <div className={styles.buyButtonsContainer}>
+                <Link
+                  href="/loja/uniforme-titular"
+                  className={styles.buyButton}
+                >
+                  COMPRAR UNIFORME TITULAR
+                </Link>
+                <Link
+                  href="/loja/uniforme-reserva"
+                  className={styles.buyButton}
+                >
+                  COMPRAR UNIFORME RESERVA
+                </Link>
+                <Link
+                  href="/loja/uniforme-goleiro"
+                  className={styles.buyButton}
+                >
+                  COMPRAR UNIFORME GOLEIRO
+                </Link>
+              </div>
+            </div>
+            <div className={styles.uniformsCarouselSide}>
+              <Carousel
+                autoplay={true}
+                arrows
+                infinite={true}
+                className={styles.uniformsCarousel}
+              >
+                <div>
+                  <div className={styles.uniformSlide}>
+                    <Image
+                      src="/images/uniforme1.png"
+                      alt="Uniforme Corinthians - Titular"
+                      className={styles.uniformImage}
+                      width={600}
+                      height={750}
+                      quality={100}
+                      priority
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div className={styles.uniformSlide}>
+                    <Image
+                      src="/images/uniforme2.png"
+                      alt="Uniforme Corinthians - Reserva"
+                      className={styles.uniformImage}
+                      width={600}
+                      height={750}
+                      quality={100}
+                      priority
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div className={styles.uniformSlide}>
+                    <Image
+                      src="/images/uniforme3.png"
+                      alt="Uniforme Corinthians - Goleiro"
+                      className={styles.uniformImage}
+                      width={600}
+                      height={750}
+                      quality={100}
+                      priority
+                    />
+                  </div>
+                </div>
+              </Carousel>
+            </div>
           </div>
         </div>
       </section>
