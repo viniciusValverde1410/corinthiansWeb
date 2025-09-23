@@ -1,9 +1,68 @@
+"use client";
+
 import styles from "./clube.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { Carousel } from "antd";
+import React, { useRef, useState } from "react";
 
 export default function Clube() {
+  const scrollContainerRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const scroll = (direction) => {
+    const container = scrollContainerRef.current;
+    const scrollAmount = 700;
+
+    if (direction === "left") {
+      container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    } else {
+      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  };
+
+  const handleScroll = () => {
+    const container = scrollContainerRef.current;
+    setCanScrollLeft(container.scrollLeft > 0);
+    setCanScrollRight(
+      container.scrollLeft < container.scrollWidth - container.clientWidth
+    );
+  };
+
+  const torcidaImages = [
+    {
+      src: "/torcida1.jpg",
+      alt: "Fiel Torcida",
+      title: "Invasão 1976",
+      description: "Histórica invasão no Maracanã",
+    },
+    {
+      src: "/torcida2.jpg",
+      alt: "Arena Corinthians",
+      title: "Neo Química Arena",
+      description: "Casa da Fiel em festa",
+    },
+    {
+      src: "/torcida3.jpg",
+      alt: "Gaviões da Fiel",
+      title: "Gaviões da Fiel",
+      description: "A maior organizada do Brasil",
+    },
+    {
+      src: "/torcida4.jpg",
+      alt: "Libertadores 2012",
+      title: "Libertadores 2012",
+      description: "Festa da conquista histórica",
+    },
+    {
+      src: "/torcida5.jpg",
+      alt: "Mundial 2012",
+      title: "Mundial 2012",
+      description: "Campeões do mundo",
+    },
+  ];
+
   return (
     <div>
       <section className={styles.heroSection}>
@@ -202,9 +261,7 @@ export default function Clube() {
               </div>
             </div>
           </Carousel>
-
         </div>{" "}
-
         <div className={styles.stadiumInfo}>
           <div className={styles.infoGrid}>
             <div className={styles.infoItem}>
@@ -231,6 +288,128 @@ export default function Clube() {
               tecnológicas do Brasil. Recebe grandes eventos esportivos, shows
               internacionais e até jogos da NFL.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.supportesSection}>
+        <div className={styles.container}>
+          <div className={styles.header}>
+            <h2 className={styles.title}>A Fiel Torcida</h2>
+            <p className={styles.subtitle}>
+              A maior e mais apaixonada torcida do Brasil
+            </p>
+          </div>
+
+          <div className={styles.galleryWrapper}>
+            <button
+              className={`${styles.scrollButton} ${styles.leftButton} ${
+                !canScrollLeft ? styles.disabled : ""
+              }`}
+              onClick={() => scroll("left")}
+              disabled={!canScrollLeft}
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15 18L9 12L15 6"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+
+            <div
+              className={styles.scrollContainer}
+              ref={scrollContainerRef}
+              onScroll={handleScroll}
+            >
+              {torcidaImages.map((image, index) => (
+                <div key={index} className={styles.imageCard}>
+                  <div className={styles.imageWrapper}>
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      className={styles.image}
+                      width={800}
+                      height={600}
+                      quality={90}
+                    />
+                    <div className={styles.overlay}>
+                      <div className={styles.overlayContent}>
+                        <h3 className={styles.imageTitle}>{image.title}</h3>
+                        <p className={styles.imageDescription}>
+                          {image.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <button
+              className={`${styles.scrollButton} ${styles.rightButton} ${
+                !canScrollRight ? styles.disabled : ""
+              }`}
+              onClick={() => scroll("right")}
+              disabled={!canScrollRight}
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18L15 12L9 6"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div className={styles.scrollIndicator}>
+            <span>Arraste ou use as setas para ver mais</span>
+          </div>
+
+          <div className={styles.supportersInfo}>
+            <div className={styles.infoGrid}>
+              <div className={styles.infoItem}>
+                <h3>Torcedores</h3>
+                <p>30+ milhões no mundo</p>
+              </div>
+              <div className={styles.infoItem}>
+                <h3>Fundada</h3>
+                <p>1 de setembro de 1910</p>
+              </div>
+              <div className={styles.infoItem}>
+                <h3>Presença</h3>
+                <p>Todos os estados do Brasil</p>
+              </div>
+              <div className={styles.infoItem}>
+                <h3>Democracia Corinthiana</h3>
+                <p>Movimento histórico dos anos 80</p>
+              </div>
+            </div>
+            <div className={styles.supportersDescription}>
+              <p>
+                A Fiel Torcida transcende o futebol. É um movimento social, uma
+                família que se estende por todo o Brasil e pelo mundo. Conhecida
+                pela paixão incondicional, lealdade e apoio em todos os
+                momentos, a Fiel é reconhecida como uma das torcidas mais
+                apaixonadas e organizadas do mundo. Do Parque São Jorge à Neo
+                Química Arena, a força da torcida é o combustível que move o
+                Timão.
+              </p>
+            </div>
           </div>
         </div>
       </section>
