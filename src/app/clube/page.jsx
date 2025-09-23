@@ -79,7 +79,35 @@ export default function Clube() {
   const openLyricsModal = () => setShowLyrics(true);
   const closeLyricsModal = () => setShowLyrics(false);
 
-  const hinoLetra = `Salve o Corinthians\nO campeão dos campeões\nEternamente dentro dos nossos corações\nSalve o Corinthians\nDe tradições e glórias mil\nTu és orgulho\nDos desportistas do Brasil\n\nTeu passado é uma bandeira\nTeu presente, uma lição\nFiguras entre os primeiros\nDo nosso esporte bretão\n\nCorinthians grande\nSempre altaneiro\nÉs do Brasil\nO clube mais brasileiro!`;
+  const hinoLetra = `Salve o Corinthians
+O campeão dos campeões
+Eternamente
+Dentro dos nossos corações
+
+Salve o Corinthians
+De tradições e glórias mil
+Tu és orgulho
+Dos desportistas do Brasil
+
+Teu passado é uma bandeira
+Teu presente é uma lição
+Figuras entre os primeiros
+Do nosso esporte bretão
+
+Corinthians grande
+Sempre altaneiro
+És do Brasil
+O clube mais brasileiro
+
+Salve o Corinthians
+O campeão dos campeões
+Eternamente
+Dentro dos nossos corações
+
+Salve o Corinthians
+De tradições e glórias mil
+Tu és orgulho
+Dos desportistas do Brasil`;
 
   return (
     <div>
@@ -334,9 +362,8 @@ export default function Clube() {
 
           <div className={styles.galleryWrapper}>
             <button
-              className={`${styles.scrollButton} ${styles.leftButton} ${
-                !canScrollLeft ? styles.disabled : ""
-              }`}
+              className={`${styles.scrollButton} ${styles.leftButton} ${!canScrollLeft ? styles.disabled : ""
+                }`}
               onClick={() => scroll("left")}
               disabled={!canScrollLeft}
             >
@@ -385,9 +412,8 @@ export default function Clube() {
             </div>
 
             <button
-              className={`${styles.scrollButton} ${styles.rightButton} ${
-                !canScrollRight ? styles.disabled : ""
-              }`}
+              className={`${styles.scrollButton} ${styles.rightButton} ${!canScrollRight ? styles.disabled : ""
+                }`}
               onClick={() => scroll("right")}
               disabled={!canScrollRight}
             >
