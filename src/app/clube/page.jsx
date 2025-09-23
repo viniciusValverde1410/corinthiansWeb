@@ -32,34 +32,34 @@ export default function Clube() {
 
   const torcidaImages = [
     {
-      src: "/torcida1.jpg",
-      alt: "Fiel Torcida",
-      title: "Invasão 1976",
-      description: "Histórica invasão no Maracanã",
+      src: "/images/torcida1.png",
+      alt: "Mosaico",
+      title: "Mosaico na Neo Química Arena ",
+      description: "Mosaíco no Derby Paulista",
     },
     {
-      src: "/torcida2.jpg",
-      alt: "Arena Corinthians",
-      title: "Neo Química Arena",
-      description: "Casa da Fiel em festa",
+      src: "/images/torcida2.png",
+      alt: "Fiel torcida na Arena",
+      title: "Torcida zona Norte",
+      description: "Organizada em festa",
     },
     {
-      src: "/torcida3.jpg",
+      src: "/images/torcida3.png",
       alt: "Gaviões da Fiel",
-      title: "Gaviões da Fiel",
-      description: "A maior organizada do Brasil",
+      title: "Gaviões da Fiel na Libertadores 2012",
+      description: "Apoio incondicional na conquista da América",
     },
     {
-      src: "/torcida4.jpg",
-      alt: "Libertadores 2012",
-      title: "Libertadores 2012",
-      description: "Festa da conquista histórica",
+      src: "/images/torcida4.png",
+      alt: "Invasão no Maracanã",
+      title: "Invasão histórica",
+      description: "A Fiel lotando o Maracanã",
     },
     {
-      src: "/torcida5.jpg",
+      src: "/images/torcida5.png",
       alt: "Mundial 2012",
-      title: "Mundial 2012",
-      description: "Campeões do mundo",
+      title: "Mundial 2012 invasão no aeroporto",
+      description: "O apoio da Fiel para os campeões do mundo",
     },
   ];
 
