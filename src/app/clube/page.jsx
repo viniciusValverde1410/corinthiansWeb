@@ -63,6 +63,24 @@ export default function Clube() {
     },
   ];
 
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [showLyrics, setShowLyrics] = useState(false);
+  const audioRef = useRef(null);
+
+  const toggleHino = () => {
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
+  const openLyricsModal = () => setShowLyrics(true);
+  const closeLyricsModal = () => setShowLyrics(false);
+
+  const hinoLetra = `Salve o Corinthians\nO campeão dos campeões\nEternamente dentro dos nossos corações\nSalve o Corinthians\nDe tradições e glórias mil\nTu és orgulho\nDos desportistas do Brasil\n\nTeu passado é uma bandeira\nTeu presente, uma lição\nFiguras entre os primeiros\nDo nosso esporte bretão\n\nCorinthians grande\nSempre altaneiro\nÉs do Brasil\nO clube mais brasileiro!`;
+
   return (
     <div>
       <section className={styles.heroSection}>
@@ -530,6 +548,54 @@ export default function Clube() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className={styles.anthemSection}>
+        <div className={styles.anthemHeader}>
+          <h2 className={styles.bannerText}>Hino do Timão</h2>
+          <p className={styles.subtitle}>Salve o Corinthians!</p>
+        </div>
+
+        <div className={styles.anthemContent}>
+          <audio ref={audioRef} src="/songs/hino-corinthians.mp3" />
+          <div
+            style={{
+              display: "flex",
+              gap: "1rem",
+              flexWrap: "wrap",
+              justifyContent: "center",
+            }}
+          >
+            <button onClick={toggleHino} className={styles.anthemButton}>
+              {isPlaying ? "❚❚  Pausar Hino" : "▶  Tocar Hino"}
+            </button>
+            <button
+              onClick={openLyricsModal}
+              className={styles.anthemButton}
+              style={{ background: "var(--cinza-escuro)" }}
+            >
+              💬 Ver Letra
+            </button>
+          </div>
+        </div>
+
+        {showLyrics && (
+          <div className={styles.lyricsModalOverlay} onClick={closeLyricsModal}>
+            <div
+              className={styles.lyricsModal}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className={styles.closeModalButton}
+                onClick={closeLyricsModal}
+              >
+                &times;
+              </button>
+              <h3 className={styles.lyricsTitle}>Letra do Hino</h3>
+              <pre className={styles.lyricsText}>{hinoLetra}</pre>
+            </div>
+          </div>
+        )}
       </section>
     </div>
   );
