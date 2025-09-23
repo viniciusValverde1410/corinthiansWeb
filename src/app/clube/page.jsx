@@ -623,6 +623,25 @@ Dos desportistas do Brasil`;
           </div>
         )}
       </section>
+
+      <section className={styles.historyBanner}>
+         <div className={styles.bannerContainer}>
+          <Image
+            className={styles.bannerImage}
+            src="/images/banner2.png"
+            alt="Banner"
+            layout="fill"
+            objectFit="cover"
+          />
+
+          <h2 className={styles.bannerText}>
+            CONHEÇA A HISTÓRIA DO TIMÃO
+          </h2>
+
+          <button className={styles.historyButton}>Saiba Mais</button>
+        </div>
+      </section>
+    
     </div>
   );
 }

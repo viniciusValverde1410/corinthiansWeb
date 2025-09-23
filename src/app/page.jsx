@@ -11,7 +11,7 @@ export default function Home() {
     if (state.succeeded) {
       return (
         <p>
-          ✅ Obrigado por entrar em contato! Responderemos o mais breve
+          🖤 Obrigado por entrar em contato! Responderemos o mais breve
           possível.
         </p>
       );
