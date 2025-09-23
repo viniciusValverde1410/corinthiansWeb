@@ -374,6 +374,150 @@
     font-weight: bold;
 }
 
+/* Centers Section - Parque São Jorge e CT */
+.centersSection {
+    width: 100%;
+    background: linear-gradient(to bottom,
+            var(--branco) 0%,
+            rgba(255, 255, 255, 0.95) 20%,
+            rgba(248, 248, 248, 0.9) 40%,
+            rgba(245, 245, 245, 0.85) 60%,
+            rgba(240, 240, 240, 0.8) 80%,
+            rgba(235, 235, 235, 0.75) 100%);
+    padding: 6rem 2rem;
+}
+
+.centersContainer {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.centersHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.centersContent {
+    display: flex;
+    gap: 4rem;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.centerCard {
+    background: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 600px;
+}
+
+.centerCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+}
+
+.centerImage {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.centerImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.centerCard:hover .centerImg {
+    transform: scale(1.05);
+}
+
+.centerInfo {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.centerTitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000000;
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.centerSubtitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #666666;
+    margin: 0 0 1.5rem 0;
+    font-style: italic;
+}
+
+.centerDescription {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444444;
+    margin: 0 0 2rem 0;
+    font-weight: 400;
+    flex: 1;
+}
+
+.centerAddress {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.addressText {
+    font-size: 0.95rem;
+    color: #666666;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.mapButton {
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mapButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, #333333 0%, #000000 100%);
+}
+
+.mapButton:active {
+    transform: translateY(0);
+}
+
 .supportesSection {
     background: linear-gradient(to bottom,
             #8e8e9341 0%,
@@ -955,5 +1099,111 @@
     .scrollButton svg {
         width: 20px;
         height: 20px;
+    }
+}
+
+/* Responsive para Centers Section */
+@media (max-width: 998px) {
+    .centersContent {
+        gap: 3rem;
+    }
+
+    .centerInfo {
+        padding: 2rem;
+    }
+
+    .centerTitle {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .centersSection {
+        padding: 4rem 1rem;
+    }
+
+    .centersContent {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .centerImage {
+        height: 250px;
+    }
+
+    .centerInfo {
+        padding: 1.5rem;
+    }
+
+    .centerTitle {
+        font-size: 1.5rem;
+    }
+
+    .centerSubtitle {
+        font-size: 1rem;
+    }
+
+    .centerDescription {
+        font-size: 0.95rem;
+    }
+
+    .centerAddress {
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+
+    .mapButton {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .centersSection {
+        padding: 3rem 1rem;
+    }
+
+    .centersHeader {
+        margin-bottom: 3rem;
+    }
+
+    .centerImage {
+        height: 200px;
+    }
+
+    .centerInfo {
+        padding: 1.25rem;
+    }
+
+    .centerTitle {
+        font-size: 1.3rem;
+    }
+
+    .centerSubtitle {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    .centerDescription {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .centerAddress {
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+
+    .addressText {
+        font-size: 0.85rem;
+        text-align: center;
+    }
+
+    .mapButton {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+        width: 100%;
     }
 }

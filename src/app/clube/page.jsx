@@ -413,6 +413,109 @@ export default function Clube() {
           </div>
         </div>
       </section>
+
+      <section className={styles.centersSection}>
+        <div className={styles.centersContainer}>
+          <div className={styles.centersHeader}>
+            <h2 className={styles.bannerText}>CENTROS DE EXCELÊNCIA</h2>
+            <p className={styles.subtitle}>
+              Tradição e modernidade do Corinthians
+            </p>
+          </div>
+
+          <div className={styles.centersContent}>
+            <div className={styles.centerCard}>
+              <div className={styles.centerImage}>
+                <Image
+                  src="/images/estadio.png"
+                  alt="Parque São Jorge"
+                  className={styles.centerImg}
+                  width={600}
+                  height={400}
+                  quality={90}
+                />
+              </div>
+              <div className={styles.centerInfo}>
+                <h3 className={styles.centerTitle}>Parque São Jorge</h3>
+                <p className={styles.centerSubtitle}>
+                  Berço da história e tradição corinthiana
+                </p>
+                <p className={styles.centerDescription}>
+                  O Parque São Jorge é a casa histórica do Corinthians, um
+                  complexo esportivo que abriga a sede administrativa, o ginásio
+                  poliesportivo, e espaços para as categorias de base. Conhecido
+                  como "Templo do Corinthians", é um local de grande importância
+                  para a cultura e a identidade do clube, onde nascem gerações
+                  de jogadores e a paixão da Fiel Torcida tem suas raízes.
+                </p>
+                <div className={styles.centerAddress}>
+                  <span className={styles.addressText}>
+                    Rua São Jorge, 777 - Tatuapé, São Paulo - SP
+                  </span>
+                  <button
+                    className={styles.mapButton}
+                    onClick={() =>
+                      window.open(
+                        "https://maps.google.com/?q=Parque+São+Jorge+Corinthians+Tatuapé+São+Paulo",
+                        "_blank"
+                      )
+                    }
+                  >
+                    📍 Ver no Mapa
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.centerCard}>
+              <div className={styles.centerImage}>
+                <Image
+                  src="/images/estadio.png"
+                  alt="Centro de Treinamento Dr. Joaquim Grava"
+                  className={styles.centerImg}
+                  width={600}
+                  height={400}
+                  quality={90}
+                />
+              </div>
+              <div className={styles.centerInfo}>
+                <h3 className={styles.centerTitle}>
+                  Centro de Treinamento Dr. Joaquim Grava
+                </h3>
+                <p className={styles.centerSubtitle}>
+                  O coração da preparação profissional
+                </p>
+                <p className={styles.centerDescription}>
+                  O CT Joaquim Grava é o moderno centro de excelência do
+                  Corinthians, inaugurado em 2010 e localizado na zona leste de
+                  São Paulo. Com infraestrutura completa, incluindo campos
+                  oficiais, hotel, restaurante, academia, e sala de recuperação,
+                  é onde a equipe profissional treina e se prepara para os
+                  desafios do futebol. O centro também passa por constantes
+                  melhorias para garantir conforto e tecnologia de ponta aos
+                  atletas.
+                </p>
+                <div className={styles.centerAddress}>
+                  <span className={styles.addressText}>
+                    Av. Miguel Ignácio Curi, 111 - Itaquera, São Paulo - SP
+                  </span>
+                  <button
+                    className={styles.mapButton}
+                    onClick={() =>
+                      window.open(
+                        "https://maps.google.com/?q=CT+Joaquim+Grava+Corinthians+Itaquera+São+Paulo",
+                        "_blank"
+                      )
+                    }
+                  >
+                    📍 Ver no Mapa
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
