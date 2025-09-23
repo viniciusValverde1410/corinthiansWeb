@@ -80,34 +80,34 @@ export default function Clube() {
   const closeLyricsModal = () => setShowLyrics(false);
 
   const hinoLetra = `Salve o Corinthians
-O campeão dos campeões
-Eternamente
-Dentro dos nossos corações
+  O campeão dos campeões
+  Eternamente
+  Dentro dos nossos corações
 
-Salve o Corinthians
-De tradições e glórias mil
-Tu és orgulho
-Dos desportistas do Brasil
+  Salve o Corinthians
+  De tradições e glórias mil
+  Tu és orgulho
+  Dos desportistas do Brasil
 
-Teu passado é uma bandeira
-Teu presente é uma lição
-Figuras entre os primeiros
-Do nosso esporte bretão
+  Teu passado é uma bandeira
+  Teu presente é uma lição
+  Figuras entre os primeiros
+  Do nosso esporte bretão
 
-Corinthians grande
-Sempre altaneiro
-És do Brasil
-O clube mais brasileiro
+  Corinthians grande
+  Sempre altaneiro
+  És do Brasil
+  O clube mais brasileiro
 
-Salve o Corinthians
-O campeão dos campeões
-Eternamente
-Dentro dos nossos corações
+  Salve o Corinthians
+  O campeão dos campeões
+  Eternamente
+  Dentro dos nossos corações
 
-Salve o Corinthians
-De tradições e glórias mil
-Tu és orgulho
-Dos desportistas do Brasil`;
+  Salve o Corinthians
+  De tradições e glórias mil
+  Tu és orgulho
+  Dos desportistas do Brasil`;
 
   return (
     <div>
@@ -624,24 +624,27 @@ Dos desportistas do Brasil`;
         )}
       </section>
 
-      <section className={styles.historyBanner}>
-         <div className={styles.bannerContainer}>
+      <section className={styles.historyBannerSection}>
+      <div className={styles.historyBanner}>
+        <div className={styles.bannerContainer}>
           <Image
             className={styles.bannerImage}
             src="/images/banner2.png"
             alt="Banner"
             layout="fill"
             objectFit="cover"
+            quality={100}
           />
 
-          <h2 className={styles.bannerText}>
-            CONHEÇA A HISTÓRIA DO TIMÃO
-          </h2>
+          <h2 className={styles.bannerText2}>CONHEÇA A HISTÓRIA DO TIMÃO</h2>
 
-          <button className={styles.historyButton}>Saiba Mais</button>
+            <Link href="/historia">
+              <button className={styles.historyButton}>Saiba Mais</button>
+            </Link>
         </div>
+      </div>
       </section>
-    
+
     </div>
   );
 }
