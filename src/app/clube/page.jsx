@@ -427,12 +427,13 @@ export default function Clube() {
             <div className={styles.centerCard}>
               <div className={styles.centerImage}>
                 <Image
-                  src="/images/estadio.png"
+                  src="/images/pqsaojorge.png"
                   alt="Parque São Jorge"
                   className={styles.centerImg}
                   width={600}
                   height={400}
                   quality={90}
+                  objectFit="cover"
                 />
               </div>
               <div className={styles.centerInfo}>
@@ -470,12 +471,13 @@ export default function Clube() {
             <div className={styles.centerCard}>
               <div className={styles.centerImage}>
                 <Image
-                  src="/images/estadio.png"
+                  src="/images/ct.png"
                   alt="Centro de Treinamento Dr. Joaquim Grava"
                   className={styles.centerImg}
                   width={600}
                   height={400}
                   quality={90}
+                  objectFit="cover"
                 />
               </div>
               <div className={styles.centerInfo}>
