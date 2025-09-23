@@ -288,6 +288,19 @@ export default function Clube() {
               tecnológicas do Brasil. Recebe grandes eventos esportivos, shows
               internacionais e até jogos da NFL.
             </p>
+            <div className={styles.stadiumLocation}>
+              <button
+                className={styles.stadiumMapButton}
+                onClick={() =>
+                  window.open(
+                    "https://maps.google.com/?q=Neo+Química+Arena+Corinthians+Itaquera+São+Paulo",
+                    "_blank"
+                  )
+                }
+              >
+                📍 Ver Localização no Mapa
+              </button>
+            </div>
           </div>
         </div>
       </section>
