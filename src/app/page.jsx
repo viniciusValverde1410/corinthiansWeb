@@ -117,7 +117,7 @@ export default function Home() {
                     alt="Uniforme do Corinthians"
                     className={styles.carouselImage}
                     fill
-                    style={{ objectFit: "cover" }}
+                    style={{ objectFit: "cover", objectPosition: "top" }}
                   />
                   <div className={styles.carouselText}>
                     <h1>Uniforme do Timão</h1>
@@ -133,7 +133,7 @@ export default function Home() {
                     alt="Torcida do Corinthians"
                     className={styles.carouselImage}
                     fill
-                    style={{ objectFit: "cover" }}
+                    style={{ objectFit: "cover", objectPosition: "top" }}
                   />
                   <div className={styles.carouselText}>
                     <h1>Torcida apaixonada</h1>
@@ -149,7 +149,7 @@ export default function Home() {
                     alt="Neo Química Arena - Casa da Fiel"
                     className={styles.carouselImage}
                     fill
-                    style={{ objectFit: "cover" }}
+                    style={{ objectFit: "cover", objectPosition: "top" }}
                   />
                   <div className={styles.carouselText}>
                     <h1>Neo Química Arena</h1>

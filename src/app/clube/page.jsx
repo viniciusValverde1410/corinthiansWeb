@@ -79,7 +79,8 @@ export default function Clube() {
   const openLyricsModal = () => setShowLyrics(true);
   const closeLyricsModal = () => setShowLyrics(false);
 
-  const hinoLetra = `Salve o Corinthians
+  const hinoLetra = `
+  Salve o Corinthians
   O campeão dos campeões
   Eternamente
   Dentro dos nossos corações
