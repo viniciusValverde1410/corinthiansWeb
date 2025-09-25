@@ -159,6 +159,29 @@ export default function Historia() {
         </div>
       </section>
 
+     <section className={styles.titleBannerSection}>
+        <div className={styles.titleBanner}>
+          <div className={styles.bannerContainer}>
+            <Image
+              className={styles.bannerImage}
+              src="/images/banner3.png"
+              alt="Banner"
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+              quality={100}
+            />
+
+
+            <h2 className={styles.bannerText2}>CONHEÇA OS TÍTUOS DO TIMÃO</h2>
+
+
+            <Link href="/historia">
+              <button className={styles.titleButton}>Saiba Mais</button>
+            </Link>
+          </div>
+        </div>
+      </section>
 
     </div>
   );
