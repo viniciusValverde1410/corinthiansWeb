@@ -114,7 +114,7 @@ export default function Clube() {
       <section className={styles.heroSection}>
         <div className={styles.heroContent}>
           <div className={styles.textContent}>
-            <h1 className={styles.title}>Sport Club Corinthians Paulista</h1>
+            <h1 className={styles.title}> A instituiçãoSport Club Corinthians Paulista</h1>
             <p className={styles.institutionalText}>
               Uma paixão que une gerações. O Corinthians é democracia, é
               resistência, é o time do povo brasileiro. Ser corinthiano é
