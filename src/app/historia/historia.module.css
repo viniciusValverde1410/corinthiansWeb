@@ -62,7 +62,7 @@
     filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.2));
 }
 
-     
+
 .titleContainer {
     text-align: center;
     margin-bottom: 1rem;
@@ -131,7 +131,7 @@
     gap: 1.5rem;
 }
 
- 
+
 .rivalidadesSection {
     background: var(--cinza-claro);
     padding: 2.5rem 0 2rem 0;
@@ -222,5 +222,63 @@
     background: linear-gradient(135deg, var(--cinza-escuro) 0%, var(--preto) 100%);
 }
 
+@media (max-width: 700px) {
+    .timelineContainer {
+        max-width: 98vw;
+        padding: 0 0.5rem;
+    }
 
 
+    .escudosContainer {
+        flex-direction: column;
+        gap: 1.2rem;
+        max-width: 98vw;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .heroTitle {
+        font-size: 1.4rem;
+    }
+
+
+    .bannerText {
+        font-size: 1.1rem;
+    }
+
+
+    .timelineCard {
+        padding-left: 2.5rem;
+        min-height: 70px;
+    }
+
+
+    .timelineYear {
+        width: 38px;
+        height: 38px;
+        font-size: 0.9rem;
+        left: 0;
+        top: 0.7rem;
+        box-shadow: 0 2px 8px #2c2c2e33, 0 0 0 2px var(--branco);
+        border-width: 2px;
+    }
+
+
+    .escudoImg {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

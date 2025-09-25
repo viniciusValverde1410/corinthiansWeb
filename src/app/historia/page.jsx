@@ -5,10 +5,8 @@ import TimelineCard from "../../components/timelineCard";
 import ShieldCard from "../../components/shieldCard";
 import RivalidadeCard from "../../components/rivalidadeCard";
 
-
 export default function Historia() {
-
-    const timelineData = [
+  const timelineData = [
     {
       year: "1910",
       title: "Fundação e Origem",
@@ -46,7 +44,7 @@ export default function Historia() {
     },
   ];
 
-    const escudos = [
+  const escudos = [
     {
       ano: "1910",
       img: "/images/escudo1910.png",
@@ -74,7 +72,7 @@ export default function Historia() {
     },
   ];
 
-   const rivalidades = [
+  const rivalidades = [
     {
       img: "/images/palmeiras.png",
       title: "Palmeiras",
@@ -97,7 +95,6 @@ export default function Historia() {
     },
   ];
 
-
   return (
     <div>
       <section className={styles.heroSection}>
@@ -105,14 +102,14 @@ export default function Historia() {
           <div className={styles.textContent}>
             <h1 className={styles.title}>História do time do povo</h1>
             <p className={styles.institutionalText}>
-              115 anos de
-              bravura e glória, nascida da força e da paixão do povo de São
-              Paulo, com uma trajetória marcada por conquistas
-              históricas nos cenários nacional e internacional, episódios de
-              coragem e resistência social e a dedicação incansável da maior e mais apaixonada
-              torcida do Brasil. o Timão é mais que um clube, é um símbolo
-              eterno de identidade, superação e orgulho inabalável para milhões
-              de brasileiros e admiradores do futebol ao redor do mundo."
+              115 anos de bravura e glória, nascida da força e da paixão do povo
+              de São Paulo, com uma trajetória marcada por conquistas históricas
+              nos cenários nacional e internacional, episódios de coragem e
+              resistência social e a dedicação incansável da maior e mais
+              apaixonada torcida do Brasil. o Timão é mais que um clube, é um
+              símbolo eterno de identidade, superação e orgulho inabalável para
+              milhões de brasileiros e admiradores do futebol ao redor do
+              mundo."
             </p>
           </div>
           <div className={styles.imageContent}>
@@ -128,10 +125,12 @@ export default function Historia() {
         </div>
       </section>
 
-       <section className={styles.timelineSection}>
+      <section className={styles.timelineSection}>
         <div className={styles.titleContainer}>
           <h2 className={styles.bannerText}>TIMELINE DO CORINTHIANS</h2>
-          <p className={styles.subtitle}>Fatos marcantes na história do clube</p>
+          <p className={styles.subtitle}>
+            Fatos marcantes na história do clube
+          </p>
         </div>
         <div className={styles.timelineContainer}>
           <div className={styles.timelineConnector} />
@@ -139,7 +138,7 @@ export default function Historia() {
         </div>
       </section>
 
-            <section className={styles.escudosSection}>
+      <section className={styles.escudosSection}>
         <div className={styles.titleContainer}>
           <h2 className={styles.bannerText}>ESCUDOS DO TIMÃO</h2>
           <p className={styles.subtitle}>Evolução dos símbolos</p>
@@ -159,7 +158,7 @@ export default function Historia() {
         </div>
       </section>
 
-     <section className={styles.titleBannerSection}>
+      <section className={styles.titleBannerSection}>
         <div className={styles.titleBanner}>
           <div className={styles.bannerContainer}>
             <Image
@@ -172,9 +171,7 @@ export default function Historia() {
               quality={100}
             />
 
-
             <h2 className={styles.bannerText2}>CONHEÇA OS TÍTUOS DO TIMÃO</h2>
-
 
             <Link href="/historia">
               <button className={styles.titleButton}>Saiba Mais</button>
@@ -182,7 +179,6 @@ export default function Historia() {
           </div>
         </div>
       </section>
-
     </div>
   );
 }
