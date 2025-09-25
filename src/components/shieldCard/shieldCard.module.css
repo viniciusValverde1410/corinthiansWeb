@@ -1,0 +1,56 @@
+.escudosContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.escudoCard {
+    background: var(--cinza-claro);
+    border-radius: 5px;
+    box-shadow: 0 2px 12px #2c2c2e0d;
+    padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+    width: 220px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    transition: box-shadow 0.2s, transform 0.2s;
+    cursor: pointer;
+    animation: fadeInUp 0.7s;
+}
+
+
+.escudoCard:hover {
+    box-shadow: 0 6px 24px #2c2c2e22;
+    transform: translateY(-4px) scale(1.03);
+}
+
+
+.escudoImg {
+    width: 90%;
+    height: 70%;
+    object-fit: cover;
+}
+
+
+.escudoAno {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--cinza-escuro);
+    text-align: center;
+    height: 10%;
+}
+
+
+.escudoText {
+    color: var(--cinza);
+    font-size: 0.93rem;
+    font-weight: 500;
+    text-align: center;
+    height: 10%;
+}

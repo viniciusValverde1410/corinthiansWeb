@@ -2,7 +2,7 @@ import styles from "./historia.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import TimelineCard from "../../components/timelineCard";
-
+import ShieldCard from "../../components/shieldCard";
 
 export default function Historia() {
 
@@ -41,6 +41,34 @@ export default function Historia() {
       year: "2012",
       title: "Libertadores e Bi Mundial",
       text: "O clube conquista a Libertadores invicto e o bicampeonato mundial, além de títulos paulistas e brasileiros, consolidando-se como potência do futebol.",
+    },
+  ];
+
+    const escudos = [
+    {
+      ano: "1910",
+      img: "/images/escudo1910.png",
+      text: "Primeiro escudo, simples e inspirado no time inglês.",
+    },
+    {
+      ano: "1919",
+      img: "/images/escudo1919.png",
+      text: "Adição dos ramos de louro e da âncora, símbolos náuticos.",
+    },
+    {
+      ano: "1939",
+      img: "/images/escudo1939.png",
+      text: "Brasão ganha mais detalhes e a bandeira paulista.",
+    },
+    {
+      ano: "1990s",
+      img: "/images/escudo1990.png",
+      text: "Modernização do traço e tipografia.",
+    },
+    {
+      ano: "Atual",
+      img: "/images/escudoAtual.png",
+      text: "Escudo atual, símbolo máximo da tradição corinthiana.",
     },
   ];
 
@@ -83,6 +111,16 @@ export default function Historia() {
         <div className={styles.timelineContainer}>
           <div className={styles.timelineConnector} />
           <TimelineCard timelineData={timelineData} />
+        </div>
+      </section>
+
+            <section className={styles.escudosSection}>
+        <div className={styles.titleContainer}>
+          <h2 className={styles.bannerText}>ESCUDOS DO TIMÃO</h2>
+          <p className={styles.subtitle}>Evolução dos símbolos</p>
+        </div>{" "}
+        <div className={styles.escudosContainer}>
+          <ShieldCard escudos={escudos} />
         </div>
       </section>
 
