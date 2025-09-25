@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import TimelineCard from "../../components/timelineCard";
 import ShieldCard from "../../components/shieldCard";
+import RivalidadeCard from "../../components/rivalidadeCard";
+
 
 export default function Historia() {
 
@@ -72,6 +74,29 @@ export default function Historia() {
     },
   ];
 
+   const rivalidades = [
+    {
+      img: "/images/palmeiras.png",
+      title: "Palmeiras",
+      text: "O maior clássico do futebol paulista e um dos maiores do mundo: o Derby Paulista. Disputa histórica, rivalidade máxima e jogos inesquecíveis.",
+    },
+    {
+      img: "/images/saopaulo.png",
+      title: "São Paulo",
+      text: "O Majestoso é sempre cercado de tensão e grandes decisões, com confrontos marcantes em finais estaduais e nacionais.",
+    },
+    {
+      img: "/images/santos.png",
+      title: "Santos",
+      text: "O Clássico Alvinegro reúne duas das maiores torcidas do estado e já decidiu títulos importantes.",
+    },
+    {
+      img: "/images/flamengo.png",
+      title: "Flamengo",
+      text: "O Clássico das Multidões: Corinthians x Flamengo é o maior duelo interestadual do Brasil, com enorme apelo nacional.",
+    },
+  ];
+
 
   return (
     <div>
@@ -121,6 +146,16 @@ export default function Historia() {
         </div>{" "}
         <div className={styles.escudosContainer}>
           <ShieldCard escudos={escudos} />
+        </div>
+      </section>
+
+      <section className={styles.rivalidadesSection}>
+        <div className={styles.titleContainer}>
+          <h2 className={styles.bannerText}>RIVALIDADES</h2>
+          <p className={styles.subtitle}>Clubes rivais do timão</p>
+        </div>{" "}
+        <div className={styles.rivalidadesContainer}>
+          <RivalidadeCard rivalidades={rivalidades} />
         </div>
       </section>
 

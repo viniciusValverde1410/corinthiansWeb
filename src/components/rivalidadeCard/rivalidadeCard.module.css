@@ -1,0 +1,178 @@
+.rivalidadeContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
+}
+
+
+.rivalidadeCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--branco  );
+  border-radius: 5px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(44, 44, 46, 0.1);
+  width: 280px;
+  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(44, 44, 46, 0.05);  
+  justify-content: space-around;
+}
+
+
+.rivalidadeCard:hover {
+  box-shadow: 0 12px 48px rgba(44, 44, 46, 0.15);
+  transform: translateY(-6px);
+}
+
+
+.rivalidadeImgWrapper {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 4px 16px rgba(44, 44, 46, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.rivalidadeCard:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px rgba(44, 44, 46, 0.15);
+}
+
+
+.rivalidadeCard:hover .rivalidadeImg {
+  transform: scale(1.05);
+}
+
+
+.rivalidadeTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--preto);
+  text-align: center;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+
+.rivalidadeText {
+  font-size: 1rem;
+  color: var(--cinza-escuro);
+  text-align: left;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 280px;
+}
+
+
+.torcidaImgWrapper {
+    width: 250px;
+    height: 150px;
+    background: linear-gradient(135deg, var(--branco) 0%, #ffffff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 4px 16px rgba(44, 44, 46, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    }
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.rivalidadeCard {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+
+@media (max-width: 768px) {
+  .rivalidadeCard {
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
+  }
+ 
+  .rivalidadeImgWrapper {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1rem;
+  }
+ 
+  .rivalidadeCard .rivalidadeImgWrapper:last-child {
+    width: 60px;
+    height: 60px;
+  }
+ 
+  .rivalidadeTitle {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+ 
+  .rivalidadeText {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    max-width: 240px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .rivalidadeCard {
+    padding: 1.25rem 0.8rem;
+  }
+ 
+  .rivalidadeImgWrapper {
+    width: 60px;
+    height: 60px;
+  }
+ 
+  .rivalidadeCard .rivalidadeImgWrapper:last-child {
+    width: 50px;
+    height: 50px;
+  }
+ 
+  .rivalidadeTitle {
+    font-size: 1.1rem;
+  }
+ 
+  .rivalidadeText {
+    font-size: 0.85rem;
+    max-width: 200px;
+  }
+}
+
+
+
+
+.rivalidadeCard:active {
+  transform: translateY(-4px) scale(0.98);
+}
+
+
+.rivalidadeImgWrapper:hover {
+  background: linear-gradient(135deg, #ffffff 0%, var(--branco) 100%);
+}
