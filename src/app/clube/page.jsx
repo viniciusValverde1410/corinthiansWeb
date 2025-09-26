@@ -111,7 +111,7 @@ export default function Clube() {
   Dos desportistas do Brasil`;
 
   return (
-    <div>
+    <main>
       <section className={styles.heroSection}>
         <div className={styles.heroContent}>
           <div className={styles.textContent}>
@@ -646,6 +646,6 @@ export default function Clube() {
       </div>
       </section>
 
-    </div>
+    </main>
   );
 }

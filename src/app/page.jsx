@@ -49,7 +49,7 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <main>
       <section className={styles.heroSection}>
         <div className={styles["blur-layer-1"]}></div>
         <div className={styles["blur-layer-2"]}></div>
@@ -191,6 +191,6 @@ export default function Home() {
           <ContactForm />
         </div>
       </section>
-    </div>
+    </main>
   );
 }

@@ -96,7 +96,7 @@ export default function Historia() {
   ];
 
   return (
-    <div>
+    <main>
       <section className={styles.heroSection}>
         <div className={styles.heroContent}>
           <div className={styles.textContent}>
@@ -179,6 +179,6 @@ export default function Historia() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
