@@ -32,31 +32,31 @@ export default function Clube() {
 
   const torcidaImages = [
     {
-      src: "/images/torcida1.png",
+      src: "/images/clubePage/torcida1.png",
       alt: "Mosaico",
       title: "Mosaico na Neo Química Arena ",
       description: "Mosaíco no Derby Paulista",
     },
     {
-      src: "/images/torcida2.png",
+      src: "/images/clubePage/torcida2.png",
       alt: "Fiel torcida na Arena",
       title: "Torcida zona Norte",
       description: "Organizada em festa",
     },
     {
-      src: "/images/torcida3.png",
+      src: "/images/clubePage/torcida3.png",
       alt: "Gaviões da Fiel",
       title: "Gaviões da Fiel na Libertadores 2012",
       description: "Apoio incondicional na conquista da América",
     },
     {
-      src: "/images/torcida4.png",
+      src: "/images/clubePage/torcida4.png",
       alt: "Invasão no Maracanã",
       title: "Invasão histórica",
       description: "A Fiel lotando o Maracanã",
     },
     {
-      src: "/images/torcida5.png",
+      src: "/images/clubePage/torcida5.png",
       alt: "Mundial 2012",
       title: "Mundial 2012 invasão no aeroporto",
       description: "O apoio da Fiel para os campeões do mundo",
@@ -126,7 +126,7 @@ export default function Clube() {
           </div>
           <div className={styles.imageContent}>
             <Image
-              src="/images/escudo.png"
+              src="/images/clubePage/escudo.png"
               alt="Escudo do Corinthians"
               className={styles.escudo}
               width={180}
@@ -182,7 +182,7 @@ export default function Clube() {
                 <div>
                   <div className={styles.uniformSlide}>
                     <Image
-                      src="/images/uniforme1.png"
+                      src="/images/clubePage/uniforme1.png"
                       alt="Uniforme Corinthians - Titular"
                       className={styles.uniformImage}
                       width={600}
@@ -195,7 +195,7 @@ export default function Clube() {
                 <div>
                   <div className={styles.uniformSlide}>
                     <Image
-                      src="/images/uniforme2.png"
+                      src="/images/clubePage/uniforme2.png"
                       alt="Uniforme Corinthians - Reserva"
                       className={styles.uniformImage}
                       width={600}
@@ -208,7 +208,7 @@ export default function Clube() {
                 <div>
                   <div className={styles.uniformSlide}>
                     <Image
-                      src="/images/uniforme3.png"
+                      src="/images/clubePage/uniforme3.png"
                       alt="Uniforme Corinthians - Goleiro"
                       className={styles.uniformImage}
                       width={600}
@@ -239,7 +239,7 @@ export default function Clube() {
             <div>
               <div className={styles.contentCarousel}>
                 <Image
-                  src="/images/arena1.png"
+                  src="/images/clubePage/arena1.png"
                   alt="Neo Química Arena - Casa cheia"
                   className={styles.carouselImage}
                   fill
@@ -251,8 +251,8 @@ export default function Clube() {
             <div>
               <div className={styles.contentCarousel}>
                 <Image
-                  src="/images/arena2.png"
-                  alt="Neo Química Arena - Vista externa"
+                  src="/images/clubePage/arena2.png"
+                  alt="Neo Química Arena  - Vista externa"
                   className={styles.carouselImage}
                   fill
                   style={{ objectFit: "cover" }}
@@ -263,7 +263,7 @@ export default function Clube() {
             <div>
               <div className={styles.contentCarousel}>
                 <Image
-                  src="/images/arena3.png"
+                  src="/images/clubePage/arena3.png"
                   alt="Neo Química Arena - Campo"
                   className={styles.carouselImage}
                   fill
@@ -275,7 +275,7 @@ export default function Clube() {
             <div>
               <div className={styles.contentCarousel}>
                 <Image
-                  src="/images/arena4.png"
+                  src="/images/clubePage/arena4.png"
                   alt="Neo Química Arena - Fachada"
                   className={styles.carouselImage}
                   fill
@@ -287,7 +287,7 @@ export default function Clube() {
             <div>
               <div className={styles.contentCarousel}>
                 <Image
-                  src="/images/arena5.png"
+                  src="/images/clubePage/arena5.png"
                   alt="Neo Química Arena - Abertura copa do mundo 2014"
                   className={styles.carouselImage}
                   fill
@@ -299,7 +299,7 @@ export default function Clube() {
             <div>
               <div className={styles.contentCarousel}>
                 <Image
-                  src="/images/arena6.png"
+                  src="/images/clubePage/arena6.png"
                   alt="Neo Química Arena - NFL"
                   className={styles.carouselImage}
                   fill
@@ -485,7 +485,7 @@ export default function Clube() {
             <div className={styles.centerCard}>
               <div className={styles.centerImage}>
                 <Image
-                  src="/images/pqsaojorge.png"
+                  src="/images/clubePage/pqsaojorge.png"
                   alt="Parque São Jorge"
                   className={styles.centerImg}
                   width={600}
@@ -529,7 +529,7 @@ export default function Clube() {
             <div className={styles.centerCard}>
               <div className={styles.centerImage}>
                 <Image
-                  src="/images/ct.png"
+                  src="/images/clubePage/ct.png"
                   alt="Centro de Treinamento Dr. Joaquim Grava"
                   className={styles.centerImg}
                   width={600}
@@ -630,7 +630,7 @@ export default function Clube() {
         <div className={styles.bannerContainer}>
           <Image
             className={styles.bannerImage}
-            src="/images/banner2.png"
+            src="/images/clubePage/banner2.png"
             alt="Banner"
             layout="fill"
             objectFit="cover"

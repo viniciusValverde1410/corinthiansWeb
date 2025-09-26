@@ -73,8 +73,8 @@ export default function Home() {
             >
               🏆 Títulos
             </a>
-            <a href="/jogadores" className={styles.heroButton}>
-              👥 Jogadores
+            <a href="/elenco" className={styles.heroButton}>
+              👥 Elenco
             </a>
           </div>
         </div>
@@ -113,7 +113,7 @@ export default function Home() {
               <div>
                 <div className={styles.contentCarousel}>
                   <Image
-                    src="/images/uniforme.png"
+                    src="/images/carouselHome/uniforme.png"
                     alt="Uniforme do Corinthians"
                     className={styles.carouselImage}
                     fill
@@ -129,7 +129,7 @@ export default function Home() {
               <div>
                 <div className={styles.contentCarousel}>
                   <Image
-                    src="/images/torcida.png"
+                    src="/images/carouselHome/torcida.png"
                     alt="Torcida do Corinthians"
                     className={styles.carouselImage}
                     fill
@@ -145,7 +145,7 @@ export default function Home() {
               <div>
                 <div className={styles.contentCarousel}>
                   <Image
-                    src="/images/estadio.png"
+                    src="/images/carouselHome/estadio.png"
                     alt="Neo Química Arena - Casa da Fiel"
                     className={styles.carouselImage}
                     fill

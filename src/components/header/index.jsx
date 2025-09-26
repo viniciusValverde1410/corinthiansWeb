@@ -7,11 +7,11 @@ export default function Header() {
         <header className={styles.header}>
                 <Link href="/">Início</Link>
                 <Link href="/clube">Clube</Link>
-                <Link href="/">Jogadores</Link>
+                <Link href="/elenco">Elenco</Link>
                 <Image className={styles.logo} src="/images/logo.png" alt="Logo" width={80} height={102} priority/>
-                <Link href="/">Lendas</Link>
+                <Link href="/lendas">Lendas</Link>
                 <Link href="/historia">História</Link>
-                <Link href="/">Títulos</Link>
+                <Link href="/titulos">Títulos</Link>
         </header>
     )
 }
