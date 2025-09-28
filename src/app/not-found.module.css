@@ -1,0 +1,48 @@
+.notFoundContainer {
+  min-height: 100vh;
+  width: 100vw;
+  background: var(--cinza-escuro);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.notFoundTitle {
+  font-size: 8rem;
+  font-weight: 900;
+  color: #ff2222;
+  letter-spacing: 8px;
+  text-shadow: 0 4px 24px #000, 0 0 16px #ff222299;
+  margin-bottom: 1.5rem;
+  animation: shake404 1.2s cubic-bezier(.36,.07,.19,.97) both infinite alternate;
+}
+
+@keyframes shake404 {
+  0% { transform: scale(1) rotate(0.5deg);}
+  100% { transform: scale(1.04) rotate(0.5deg);}
+}
+
+.notFoundSubtitle {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #0008;
+  margin-bottom: 0;
+  max-width: 90vw;
+}
+
+@media (max-width: 600px) {
+  .notFoundTitle {
+    font-size: 4rem;
+    letter-spacing: 3px;
+  }
+  .notFoundSubtitle {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+}
