@@ -472,6 +472,39 @@ export default function Clube() {
         </div>
       </section>
 
+      
+      <section className={styles.mascotSection}>
+      <div className={styles.titleContainer}>
+          <h2 className={styles.bannerText}>MASCOTE DO CLUBE POVO</h2>
+          <p className={styles.subtitle}>Mosqueteiro que representa a fiel</p>
+        </div>
+        <div className={styles.mascoteContainer}>
+    <div className={styles.mascoteImageWrapper}>
+      <Image
+        src="/mosqueteiro.png"
+        alt="Mosqueteiro - Mascote do Corinthians"
+        width={300}
+        height={400}
+        className={styles.mascoteImage}
+      />
+    </div>
+    
+    <div className={styles.mascoteTextContent}>
+      <p className={styles.mascoteText}>
+        O mascote oficial do Corinthians, o Mosqueteiro, tem sua origem mais aceita e oficial em 1929. 
+        Naquele ano, o Corinthians conquistou sua primeira vitória internacional em um amistoso contra o 
+        Barracas, da Argentina, vencendo por 3 a 1 no Parque São Jorge. Após essa partida, o jornalista 
+        Thomaz Mazzoni, do jornal "A Gazeta", escreveu uma crônica elogiando a "fibra de mosqueteiro" dos 
+        jogadores corintianos, destacando a garra, a determinação e a força que o time demonstrou em campo. 
+        Esse reconhecimento foi tão marcante que o personagem D'Artagnan, dos "Três Mosqueteiros" de 
+        Alexandre Dumas, passou a ser associado ao Corinthians, tornando-se símbolo de coragem e luta do 
+        clube. Assim, o Mosqueteiro representa oficialmente o espírito de resistência e bravura do 
+        Corinthians desde essa importante vitória em 1929.
+      </p>
+    </div>
+  </div>
+      </section>
+
       <section className={styles.centersSection}>
         <div className={styles.centersContainer}>
           <div className={styles.centersHeader}>
