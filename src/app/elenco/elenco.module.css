@@ -60,3 +60,76 @@
     transform: scale(1.05);
     filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.2));
 }
+
+.elencoSection {
+    height: 25rem;
+    background-color: var(--cinza-claro);
+    display: flex;
+    justify-content: flex-end;
+    align-items: to;
+    flex-direction: row;
+}
+
+.infosSection {
+    width: 840px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-around;
+}
+
+.nameContainer {
+    padding: 2rem;
+}
+
+.playerName {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--preto);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.playerPosition {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--cinza);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.playerInfos {
+    padding: 2rem;
+    display: flex;
+    flex-direction: wrap;
+    /* justify-content: space-around; */
+    align-items: left;
+    gap: 15rem;
+}
+
+.playerInfo {
+    display: flex;
+    font-size: 1.2rem;
+    color: var(--cinza);
+    margin: 0.3rem 0;
+    line-height: 1.4;
+}
+
+.nationality {
+    width: 5rem;
+    height: 3.5rem;
+    object-fit: cover;
+}
+
+.playersList {
+    background-color: var(--cinza-claro);
+    height: 10rem;
+    width: 100%;
+}

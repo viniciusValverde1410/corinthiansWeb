@@ -31,6 +31,45 @@ export default function ElencoPage() {
           </div>
         </div>
       </section>
+
+      <section className={styles.elencoSection}>
+
+        <div className={styles.infosSection}>
+          <div className={styles.nameContainer}>
+            <h2 className={styles.playerName}>Cássio Ramos</h2>
+            <p className={styles.playerPosition}>Goleiro</p>
+          </div>
+
+          <div className={styles.playerInfos}>
+            <p className={styles.playerInfo}>Idade: 35 anos</p>
+            <Image 
+              src="/images/br.png"
+              alt="Bandeira "
+              width={20}
+              height={15}
+              className={styles.nationality}
+            />
+          </div>
+
+          <div className={styles.playerInfos}>
+            <p className={styles.playerInfo}>Altura: 1,93m</p>
+            <p className={styles.playerInfo}>Peso: 92kg</p>
+          </div>
+        </div>
+
+      </section>
+
+              <div className={styles.playersList}>
+          <div className={styles.player}>
+            <Image
+              src="/images/elenco/cassio.png"
+              alt="Cássio Ramos"
+              width={150}
+              height={150}
+              className={styles.playerListImage}
+            />
+          </div>
+        </div>
     </main>
   );
 }
