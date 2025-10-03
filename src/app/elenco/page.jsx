@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from "react";
 import styles from "./elenco.module.css";
 import Image from "next/image";
 import axios from "axios";
-
+import Link from "next/link";
 
 export default function ElencoPage() {
   const [players, setPlayers] = useState([]);
@@ -270,6 +270,28 @@ export default function ElencoPage() {
           </svg>
         </button>
       </div>
+
+            <section className={styles.lendasBannerSection}>
+              <div className={styles.lendasBanner}>
+                <div className={styles.bannerContainer}>
+                  <Image
+                    className={styles.bannerImage}
+                    src="/images/banner3.png"
+                    alt="Banner"
+                    layout="fill"
+                    objectFit="cover"
+                    objectPosition="center"
+                    quality={100}
+                  />
+      
+                  <h2 className={styles.bannerText2}>CONHEÇA OS ÍDOLOS DO TIMÃO</h2>
+
+                  <Link href="/lendas">
+                    <button className={styles.lendasButton}>Saiba Mais</button>
+                  </Link>
+                </div>
+              </div>
+            </section>
     </main>
   );
 }
