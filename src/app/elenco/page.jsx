@@ -1,7 +1,113 @@
+"use client";
+
+
+import { useState, useEffect, useRef } from "react";
 import styles from "./elenco.module.css";
 import Image from "next/image";
+import axios from "axios";
+
 
 export default function ElencoPage() {
+  const [players, setPlayers] = useState([]);
+  const [selectedPlayer, setSelectedPlayer] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const scrollContainerRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+
+  useEffect(() => {
+    const fetchPlayers = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        const response = await axios.get("http://localhost:4000/players");
+       
+        const playersData = response.data.jogadores || response.data.players || [];
+       
+        setPlayers(playersData);
+       
+        if (playersData.length > 0) {
+          setSelectedPlayer(playersData[0]);
+        }
+      } catch (err) {
+        setError("Erro ao carregar os jogadores. Tente novamente mais tarde.");
+        console.error("Erro ao buscar jogadores:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+
+    fetchPlayers();
+  }, []);
+
+
+  const handlePlayerClick = (player) => {
+    setSelectedPlayer(player);
+  };
+
+
+  const scroll = (direction) => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      const scrollAmount = 300;
+      const newScrollLeft =
+        direction === "left"
+          ? container.scrollLeft - scrollAmount
+          : container.scrollLeft + scrollAmount;
+
+
+      container.scrollTo({
+        left: newScrollLeft,
+        behavior: "smooth",
+      });
+    }
+  };
+
+
+  const handleScroll = () => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      setCanScrollLeft(container.scrollLeft > 0);
+      setCanScrollRight(
+        container.scrollLeft < container.scrollWidth - container.clientWidth - 10
+      );
+    }
+  };
+
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.addEventListener("scroll", handleScroll);
+      handleScroll();
+      return () => container.removeEventListener("scroll", handleScroll);
+    }
+  }, [players]);
+
+
+  if (loading) {
+    return (
+      <main className={styles.loadingContainer}>
+        <div className={styles.spinner}></div>
+        <p className={styles.loadingText}>Carregando elenco...</p>
+      </main>
+    );
+  }
+
+
+  if (error) {
+    return (
+      <main className={styles.errorContainer}>
+        <h2 className={styles.errorTitle}>Ops! Algo deu errado</h2>
+        <p className={styles.errorText}>{error}</p>
+      </main>
+    );
+  }
+
+
   return (
     <main>
       <section className={styles.heroSection}>
@@ -9,7 +115,7 @@ export default function ElencoPage() {
           <div className={styles.textContent}>
             <h1 className={styles.title}>
               {" "}
-              Elenco atual 
+              Elenco atual
             </h1>
             <p className={styles.institutionalText}>
               Os Guerreiros do Timão, vestindo o manto sagrado, esses jogadores
@@ -32,44 +138,138 @@ export default function ElencoPage() {
         </div>
       </section>
 
-      <section className={styles.elencoSection}>
 
-        <div className={styles.infosSection}>
-          <div className={styles.nameContainer}>
-            <h2 className={styles.playerName}>Cássio Ramos</h2>
-            <p className={styles.playerPosition}>Goleiro</p>
-          </div>
-
-          <div className={styles.playerInfos}>
-            <p className={styles.playerInfo}>Idade: 35 anos</p>
-            <Image 
-              src="/images/br.png"
-              alt="Bandeira "
-              width={20}
-              height={15}
-              className={styles.nationality}
-            />
-          </div>
-
-          <div className={styles.playerInfos}>
-            <p className={styles.playerInfo}>Altura: 1,93m</p>
-            <p className={styles.playerInfo}>Peso: 92kg</p>
-          </div>
-        </div>
-
-      </section>
-
-              <div className={styles.playersList}>
-          <div className={styles.player}>
+      {selectedPlayer && (
+        <section className={styles.elencoSection}>
+          <div className={styles.selectedPlayerImage}>
             <Image
-              src="/images/elenco/cassio.png"
-              alt="Cássio Ramos"
-              width={150}
-              height={150}
-              className={styles.playerListImage}
+              src={selectedPlayer.image || "/images/player-placeholder.png"}
+              alt={selectedPlayer.name || "Jogador"}
+              width={350}
+              height={350}
+              className={styles.playerMainImage}
+              onError={(e) => {
+                e.currentTarget.src = "/images/player-placeholder.png";
+              }}
             />
           </div>
+
+
+          <div className={styles.infosSection}>
+            <div className={styles.nameContainer}>
+              <h2 className={styles.playerName}>
+                {selectedPlayer.name || "Nome indisponível"}
+              </h2>
+              <p className={styles.playerPosition}>
+                {selectedPlayer.position}
+              </p>
+            </div>
+
+
+            <div className={styles.playerInfos}>
+              <p className={styles.playerInfo}>
+                Camisa: {selectedPlayer.number || "Indisponível"}
+              </p>
+              {selectedPlayer.nationality && (
+                <Image
+                  src={selectedPlayer.nationality || "/images/player-placeholder.png"}
+                  alt="Nacionalidade"
+                  width={50}
+                  height={35}
+                  className={styles.nationality}
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                  }}
+                />
+              )}
+            </div>
+
+
+            <div className={styles.playerInfos}>
+              <p className={styles.playerInfo}>
+                Idade: {selectedPlayer.age ? `${selectedPlayer.age} anos` : "Indisponível"}
+              </p>
+              <p className={styles.playerInfo}>
+                Data de Nascimento: {selectedPlayer.birthDate || selectedPlayer.dateOfBirth || "Indisponível"}
+              </p>
+            </div>
+
+
+            <div className={styles.playerInfos}>
+              <p className={styles.playerInfo}>
+                Altura: {selectedPlayer.height || "Indisponível"}
+              </p>
+              <p className={styles.playerInfo}>
+                Peso: {selectedPlayer.weight || "Indisponível"}
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
+
+      <div className={styles.playersListContainer}>
+        <button
+          className={`${styles.scrollButton} ${styles.scrollButtonLeft}`}
+          onClick={() => scroll("left")}
+          disabled={!canScrollLeft}
+          aria-label="Rolar para esquerda"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+
+        <div className={styles.playersList} ref={scrollContainerRef}>
+          {players.map((player, index) => (
+            <div
+              key={player.id || index}
+              className={`${styles.player} ${
+                selectedPlayer?.id === player.id ? styles.playerActive : ""
+              }`}
+              onClick={() => handlePlayerClick(player)}
+            >
+              <Image
+                src={player.image || "/images/player-placeholder.png"}
+                alt={player.name || "Jogador"}
+                width={150}
+                height={150}
+                className={styles.playerListImage}
+                onError={(e) => {
+                  e.currentTarget.src = "/images/player-placeholder.png";
+                }}
+              />
+            </div>
+          ))}
         </div>
+
+
+        <button
+          className={`${styles.scrollButton} ${styles.scrollButtonRight}`}
+          onClick={() => scroll("right")}
+          disabled={!canScrollRight}
+          aria-label="Rolar para direita"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
     </main>
   );
 }
