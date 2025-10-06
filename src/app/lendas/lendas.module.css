@@ -1,0 +1,323 @@
+.loadingContainer,
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 2rem;
+  background-color: var(--branco);
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #000;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loadingText {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: 600;
+}
+
+.errorTitle {
+  font-size: 2rem;
+  color: #d32f2f;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.errorText {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Hero Section */
+.heroSection {
+  min-height: 25rem;
+  background-color: var(--branco);
+  width: 100%;
+  padding: 6rem 2rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroContent {
+  max-width: 800px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--preto);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.institutionalText {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: var(--cinza);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Seção por Década */
+.decadaSection {
+  padding: 3rem 0;
+  background-color: var(--branco);
+  position: relative;
+}
+
+.decadaHeader {
+  text-align: left;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.decadaTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--preto);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.decadaHeader::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 2rem;
+  width: calc(100% - 4rem);
+  height: 3px;
+  background: linear-gradient(to right, var(--preto) 0%, #ff0000 100%);
+}
+
+/* Container de Scroll */
+.scrollContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.scrollButton {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.scrollButton:hover {
+  background-color: rgba(0, 0, 0, 1);
+  transform: scale(1.1);
+}
+
+.scrollButtonLeft {
+  left: 1rem;
+}
+
+.scrollButtonRight {
+  right: 1rem;
+}
+
+/* Scroll Horizontal */
+.lendasScroll {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  padding: 2rem 5rem;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--cinza-claro) transparent;
+  width: 100%;
+}
+
+.lendasScroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.lendasScroll::-webkit-scrollbar-track {
+  background: rgba(142, 142, 147, 0.2);
+  border-radius: 4px;
+}
+
+.lendasScroll::-webkit-scrollbar-thumb {
+  background: var(--cinza-claro);
+  border-radius: 4px;
+}
+
+/* Card da Lenda */
+.lendaCard {
+  flex: 0 0 auto;
+  width: 320px;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(44, 44, 46, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.lendaCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(44, 44, 46, 0.15);
+}
+
+.cardImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.lendaCard:hover .cardImage {
+  transform: scale(1.05);
+}
+
+.cardNumber {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--preto);
+  color: var(--branco);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.cardContent {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cardName {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--preto);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cardPosition {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--cinza);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.cardText {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--cinza);
+  margin: 0.5rem 0 0 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 4rem 1.5rem 3rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .institutionalText {
+    font-size: 1.1rem;
+  }
+
+  .decadaTitle {
+    font-size: 2rem;
+  }
+
+  .scrollButton {
+    width: 40px;
+    height: 40px;
+  }
+
+  .lendasScroll {
+    padding: 2rem 3rem;
+  }
+
+  .lendaCard {
+    width: 280px;
+  }
+
+  .cardImageWrapper {
+    height: 340px;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .decadaTitle {
+    font-size: 1.5rem;
+  }
+
+  .scrollButton {
+    width: 35px;
+    height: 35px;
+  }
+
+  .lendasScroll {
+    padding: 1.5rem 2.5rem;
+  }
+
+  .lendaCard {
+    width: 250px;
+  }
+
+  .cardImageWrapper {
+    height: 300px;
+  }
+}
