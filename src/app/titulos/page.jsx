@@ -95,7 +95,7 @@ export default function TitulosPage() {
                 <div className={styles.cardTop}>
                   <div className={styles.cardImageWrapper}>
                     <Image
-                      src={titulo.imageUrl || "/images/player-placeholder.png"}
+                      src={titulo.imageUrl || "/images/trofeu-placeholder.png"}
                       alt={titulo.name}
                       width={300}
                       height={350}
