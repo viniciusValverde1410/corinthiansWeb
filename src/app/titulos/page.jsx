@@ -35,10 +35,11 @@ export default function TitulosPage() {
     fetchTitulos();
   }, []);
 
-  const titulosPorCategoria = categorias.reduce((acc, cat) => {
-    acc[cat.key] = titulos.filter((t) => t.category === cat.key);
-    return acc;
-  }, {});
+  const titulosPorCategoria = {
+    estadual: titulos.filter((titulo) => titulo.category === "estadual"),
+    nacional: titulos.filter((titulo) => titulo.category === "nacional"),
+    continental: titulos.filter((titulo) => titulo.category === "continental"),
+  };
 
   if (loading) {
     return (
@@ -52,7 +53,7 @@ export default function TitulosPage() {
   if (error) {
     return (
       <main className={styles.errorContainer}>
-        <h2 className={styles.errorTitle}>Ops! Algo deu errado</h2>
+        <h2 className={styles.errorTitle}>Algo deu errado</h2>
         <p className={styles.errorText}>{error}</p>
       </main>
     );
@@ -62,10 +63,22 @@ export default function TitulosPage() {
     <main>
       <section className={styles.heroSection}>
         <div className={styles.heroContent}>
-          <h1 className={styles.title}>Títulos do Corinthians</h1>
-          <p className={styles.institutionalText}>
-            Veja os troféus conquistados pelo Timão, separados por categoria. Cada título representa uma história de glória e superação!
-          </p>
+          <div className={styles.textContent}>
+            <h1 className={styles.title}>Títulos do Corinthians</h1>
+            <p className={styles.institutionalText}>
+              Veja os troféus conquistados pelo Timão, separados por categoria. Cada título representa uma história de glória e superação!
+            </p>
+          </div>
+          <div className={styles.imageContent}>
+            <Image
+              src="/images/clubePage/escudo.png"
+              alt="Troféus do Corinthians"
+              className={styles.escudo}
+              width={180}
+              height={180}
+              priority
+            />
+          </div>
         </div>
       </section>
 
@@ -77,7 +90,7 @@ export default function TitulosPage() {
           </div>
 
           <div className={styles.titulosContainer}>
-            {titulosPorCategoria[cat.key].map((titulo) => (
+            {titulosPorCategoria[cat.key]?.map((titulo) => (
               <div key={titulo.id} className={styles.tituloCard}>
                 <div className={styles.cardTop}>
                   <div className={styles.cardImageWrapper}>

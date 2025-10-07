@@ -76,11 +76,23 @@ export default function LendasPage() {
     <main>
       <section className={styles.heroSection}>
         <div className={styles.heroContent}>
-          <h1 className={styles.title}>Ídolos & Lendas</h1>
-          <p className={styles.institutionalText}>
-            Conheça os grandes nomes que fizeram e fazem história vestindo o manto sagrado. 
-            Jogadores que eternizaram seus nomes e conquistaram o coração da Fiel Torcida.
-          </p>
+          <div className={styles.textContent}>
+            <h1 className={styles.title}>Ídolos & Lendas</h1>
+            <p className={styles.institutionalText}>
+              Conheça os grandes nomes que fizeram e fazem história vestindo o manto sagrado. 
+              Jogadores que eternizaram seus nomes e conquistaram o coração da Fiel Torcida.
+            </p>
+          </div>
+          <div className={styles.imageContent}>
+            <Image
+              src="/images/history.png"
+              alt="Ídolos do Corinthians"
+              className={styles.escudo}
+              width={180}
+              height={180}
+              priority
+            />
+          </div>
         </div>
       </section>
 
