@@ -320,9 +320,42 @@
   padding: 0 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .heroSection {
-    padding: 4rem 1.5rem 3rem;
+    height: auto;
+    padding: 3rem 1.5rem;
+  }
+
+  .heroContent {
+    gap: 2rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .institutionalText {
+    font-size: 1.2rem;
+  }
+
+  .escudo {
+    width: 300px;
+  }
+
+  .categoriaTitle {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .heroContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .textContent {
+    align-items: center;
   }
 
   .title {
@@ -333,8 +366,35 @@
     font-size: 1.1rem;
   }
 
+  .escudo {
+    width: 250px;
+  }
+
   .categoriaTitle {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 2rem 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .institutionalText {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .escudo {
+    width: 180px;
+  }
+
+  .categoriaTitle {
+    font-size: 1.8rem;
   }
 
   .titulosContainer {
@@ -364,6 +424,7 @@
 
   .cardGallery {
     flex-direction: column;
+    gap: 0.8rem;
   }
 
   .galleryItem {
@@ -372,8 +433,20 @@
 }
 
 @media (max-width: 576px) {
+  .heroSection {
+    padding: 1.5rem 0.5rem;
+  }
+
   .title {
-    font-size: 2rem;
+    font-size: 1.6rem;
+  }
+
+  .institutionalText {
+    font-size: 0.9rem;
+  }
+
+  .escudo {
+    width: 150px;
   }
 
   .categoriaTitle {
@@ -412,6 +485,44 @@
 
   .galleryText {
     font-size: 0.85rem;
+  }
+
+  .galleryOverlay {
+    padding: 1rem 0.8rem 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .institutionalText {
+    font-size: 0.85rem;
+  }
+
+  .escudo {
+    width: 120px;
+  }
+
+  .categoriaTitle {
+    font-size: 1.3rem;
+  }
+
+  .cardName {
+    font-size: 1.1rem;
+  }
+
+  .cardDescription {
+    font-size: 0.85rem;
+  }
+
+  .galleryItem {
+    height: 140px;
+  }
+
+  .galleryText {
+    font-size: 0.8rem;
   }
 }
 

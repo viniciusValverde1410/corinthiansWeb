@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--branco);
+    margin-bottom: 2rem;
 }
 
 .heroContent {
@@ -63,12 +63,12 @@
 
 .uniformsSection {
     width: 100%;
-    height: 50rem;
     background-color: var(--cinza-claro);
     padding: 4rem 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .uniformsContainer {
@@ -389,8 +389,9 @@
 .supportesSection {
     background-color: var(--cinza-claro);
     width: 100%;
-    height: 68rem;
+    min-height: 75rem;
     padding: 4rem 2rem;
+    padding-bottom: 6rem;
     position: relative;
     overflow: hidden;
 }
@@ -666,26 +667,26 @@
 .mascotSection {
     width: 100%;
     background-color: var(--cinza-claro);
-    padding: 6rem;
+    padding: 4rem 2rem;
 }
 
 .mascoteContainer {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
     display: flex;
-    gap: 4rem;
+    gap: 3rem;
     align-items: center;
 }
 
 .mascoteImageWrapper {
-    flex: 0 0 300px;
+    flex: 0 0 auto;
 }
 
 .mascoteImage {
-    width: 100%;
+    width: 300px;
     height: auto;
     border-radius: 16px;
+    transition: all 0.3s ease;
 }
 
 .mascoteImage:hover {
@@ -694,6 +695,7 @@
 }
 
 .mascoteTextContent {
+    flex: 1;
     padding: 1rem;
 }
 
@@ -708,7 +710,6 @@
     width: 100%;
     background-color: var(--branco);
     padding: 4rem 2rem;
-    height: 75rem;
 }
 
 .centersContainer {
@@ -845,9 +846,9 @@
 .anthemSection {
     width: 100%;
     background: var(--cinza-claro);
-    height: 25rem;
     text-align: center;
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
+    margin-bottom: 4rem;
 }
 
 .anthemContent {
@@ -856,8 +857,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    height: 80%;
 }
 
 .anthemButton {
@@ -872,6 +871,7 @@
     width: 25rem;
     height: 4.5rem;
     font-size: 1.5rem;
+    margin-top: 1rem;
 }
 
 .lyricsModalOverlay {
@@ -967,12 +967,13 @@
 
 .bannerText2 {
     position: absolute;
-    bottom: 50%;
+    top: 50%;
     left: 50%;
-    width: 65%;
+    width: 90%;
+    margin-bottom: 2rem;
     transform: translate(-50%, -50%);
     color: var(--branco);
-    font-size: 2.8rem;
+    font-size: 64px;
     font-weight: 900;
     text-align: center;
     text-shadow:
@@ -980,7 +981,8 @@
         4px 4px 8px rgba(0, 0, 0, 0.8);
     text-transform: uppercase;
     letter-spacing: 1px;
-    line-height: 1.1;
+    line-height: 1.2;
+    padding: 1rem 0;
 }
 
 .historyButton {
@@ -996,8 +998,7 @@
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.74);
-    margin-top: 1.5rem;
-    bottom: 30%;
+    bottom: 20%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, 50%);
@@ -1007,6 +1008,70 @@
     transform: translate(-50%, 50%) translateY(-2px) scale(1.15);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     background: linear-gradient(135deg, var(--cinza-escuro) 0%, var(--preto) 100%);
+}
+
+@media (max-width: 1424px) {
+    .bannerText2 {
+        font-size: 48px;
+        width: 95%;
+    }
+    
+    .historyButton {
+        padding: 0.9rem 2rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 998px) {
+    .bannerContainer {
+        height: 18rem;
+    }
+    
+    .bannerText2 {
+        font-size: 36px;
+        width: 90%;
+        line-height: 1.3;
+    }
+    
+    .historyButton {
+        padding: 0.8rem 1.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .bannerContainer {
+        height: 16rem;
+    }
+    
+    .bannerText2 {
+        font-size: 28px;
+        width: 95%;
+        line-height: 1.4;
+        padding: 0.5rem 0;
+    }
+    
+    .historyButton {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .bannerContainer {
+        height: 14rem;
+    }
+    
+    .bannerText2 {
+        font-size: 22px;
+        width: 95%;
+        line-height: 1.5;
+    }
+    
+    .historyButton {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 998px) {
@@ -1365,6 +1430,12 @@
     .centersContent {
         flex-direction: column;
         gap: 3rem;
+        align-items: center;
+    }
+
+    .centerCard {
+        max-width: 100%;
+        width: 100%;
     }
 
     .centerImage {
@@ -1377,10 +1448,12 @@
 
     .centerTitle {
         font-size: 1.5rem;
+        font-weight: 700;
     }
 
     .centerSubtitle {
         font-size: 1rem;
+        font-weight: 600;
     }
 
     .centerDescription {

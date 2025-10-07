@@ -167,7 +167,7 @@ export default function Clube() {
                 <Link
                   href="https://www.nike.com.br/camisa-corinthians-nike-total-90-iii-2025-26-jogador-masculina-059619.html?cor=ID"
                   className={styles.buyButton}
-                >
+                >//
                   COMPRAR TERCEIRO UNIFORME
                 </Link>
                 <Link
@@ -203,6 +203,19 @@ export default function Clube() {
                     <Image
                       src="/images/clubePage/uniforme2.png"
                       alt="Uniforme Corinthians - Reserva"
+                      className={styles.uniformImage}
+                      width={600}
+                      height={750}
+                      quality={100}
+                      priority
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div className={styles.uniformSlide}>
+                    <Image
+                      src="/images/clubePage/uniforme4.png"
+                      alt="Uniforme Corinthians - Terceiro"
                       className={styles.uniformImage}
                       width={600}
                       height={750}
@@ -478,37 +491,37 @@ export default function Clube() {
         </div>
       </section>
 
-      
+
       <section className={styles.mascotSection}>
-      <div className={styles.titleContainer}>
+        <div className={styles.titleContainer}>
           <h2 className={styles.bannerText}>MASCOTE DO CLUBE POVO</h2>
           <p className={styles.subtitle}>Mosqueteiro que representa a fiel</p>
         </div>
         <div className={styles.mascoteContainer}>
-    <div className={styles.mascoteImageWrapper}>
-      <Image
-        src="/mosqueteiro.png"
-        alt="Mosqueteiro - Mascote do Corinthians"
-        width={300}
-        height={400}
-        className={styles.mascoteImage}
-      />
-    </div>
-    
-    <div className={styles.mascoteTextContent}>
-      <p className={styles.mascoteText}>
-        O mascote oficial do Corinthians, o Mosqueteiro, tem sua origem mais aceita e oficial em 1929. 
-        Naquele ano, o Corinthians conquistou sua primeira vitória internacional em um amistoso contra o 
-        Barracas, da Argentina, vencendo por 3 a 1 no Parque São Jorge. Após essa partida, o jornalista 
-        Thomaz Mazzoni, do jornal "A Gazeta", escreveu uma crônica elogiando a "fibra de mosqueteiro" dos 
-        jogadores corintianos, destacando a garra, a determinação e a força que o time demonstrou em campo. 
-        Esse reconhecimento foi tão marcante que o personagem D'Artagnan, dos "Três Mosqueteiros" de 
-        Alexandre Dumas, passou a ser associado ao Corinthians, tornando-se símbolo de coragem e luta do 
-        clube. Assim, o Mosqueteiro representa oficialmente o espírito de resistência e bravura do 
-        Corinthians desde essa importante vitória em 1929.
-      </p>
-    </div>
-  </div>
+          <div className={styles.mascoteImageWrapper}>
+            <Image
+              src="/images/clubePage/mosqueteiro.png"
+              alt="Mosqueteiro - Mascote do Corinthians"
+              width={300}
+              height={400}
+              className={styles.mascoteImage}
+            />
+          </div>
+
+          <div className={styles.mascoteTextContent}>
+            <p className={styles.mascoteText}>
+              O mascote oficial do Corinthians, o Mosqueteiro, tem sua origem mais aceita e oficial em 1929.
+              Naquele ano, o Corinthians conquistou sua primeira vitória internacional em um amistoso contra o
+              Barracas, da Argentina, vencendo por 3 a 1 no Parque São Jorge. Após essa partida, o jornalista
+              Thomaz Mazzoni, do jornal "A Gazeta", escreveu uma crônica elogiando a "fibra de mosqueteiro" dos
+              jogadores corintianos, destacando a garra, a determinação e a força que o time demonstrou em campo.
+              Esse reconhecimento foi tão marcante que o personagem D'Artagnan, dos "Três Mosqueteiros" de
+              Alexandre Dumas, passou a ser associado ao Corinthians, tornando-se símbolo de coragem e luta do
+              clube. Assim, o Mosqueteiro representa oficialmente o espírito de resistência e bravura do
+              Corinthians desde essa importante vitória em 1929.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section className={styles.centersSection}>
@@ -665,24 +678,24 @@ export default function Clube() {
       </section>
 
       <section className={styles.historyBannerSection}>
-      <div className={styles.historyBanner}>
-        <div className={styles.bannerContainer}>
-          <Image
-            className={styles.bannerImage}
-            src="/images/clubePage/banner2.png"
-            alt="Banner"
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-          />
+        <div className={styles.historyBanner}>
+          <div className={styles.bannerContainer}>
+            <Image
+              className={styles.bannerImage}
+              src="/images/clubePage/banner2.png"
+              alt="Banner"
+              layout="fill"
+              objectFit="cover"
+              quality={100}
+            />
 
-          <h2 className={styles.bannerText2}>CONHEÇA A HISTÓRIA DO TIMÃO</h2>
+            <h2 className={styles.bannerText2}>CONHEÇA A HISTÓRIA DO TIMÃO</h2>
 
             <Link href="/historia">
               <button className={styles.historyButton}>Saiba Mais</button>
             </Link>
+          </div>
         </div>
-      </div>
       </section>
 
     </main>
