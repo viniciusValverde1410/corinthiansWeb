@@ -85,8 +85,8 @@ export default function LendasPage() {
           </div>
           <div className={styles.imageContent}>
             <Image
-              src="/images/history.png"
-              alt="Ídolos do Corinthians"
+              src="/images/lendas.png"
+              alt="Ídolo Socrate"
               className={styles.escudo}
               width={180}
               height={180}

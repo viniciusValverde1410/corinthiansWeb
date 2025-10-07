@@ -92,7 +92,8 @@
 }
 
 .escudo {
-  width: 420px;
+  width: 550px;
+  border-radius: 5px;
   height: auto;
   object-fit: cover;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -104,7 +105,6 @@
   filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.2));
 }
 
-/* Seção por Década */
 .decadaSection {
   padding: 3rem 0;
   background-color: var(--branco);
@@ -132,12 +132,11 @@
   position: absolute;
   bottom: 0;
   left: 2rem;
-  width: calc(100% - 4rem);
+  width:  550px;
   height: 3px;
   background: linear-gradient(to right, var(--preto) 0%, #ff0000 100%);
 }
 
-/* Container de Scroll */
 .scrollContainer {
   position: relative;
   display: flex;
@@ -175,7 +174,6 @@
   right: 1rem;
 }
 
-/* Scroll Horizontal */
 .lendasScroll {
   display: flex;
   gap: 2rem;
@@ -201,7 +199,6 @@
   border-radius: 4px;
 }
 
-/* Card da Lenda */
 .lendaCard {
   flex: 0 0 auto;
   width: 320px;
