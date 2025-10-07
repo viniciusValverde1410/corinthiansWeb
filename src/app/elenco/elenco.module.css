@@ -139,23 +139,19 @@
 
 .selectedPlayerImage {
     height: auto;
-    width: 350px;
-    object-fit: cover;
-    position: top;
-
+    width: 400px;
+    height: 420px;
+    object-fit: top;
 }
-
 
 .playerMainImage {
     object-fit: cover;
+    object-position: top;
     transition: transform 0.3s ease;
+    position: top;
+    height: 420px;
+
 }
-
-
-.playerMainImage:hover {
-    transform: scale(1.02);
-}
-
 
 .infosSection {
     width: 840px;
@@ -215,9 +211,10 @@
 
 
 .nationality {
-    width: 5rem;
-    height: 3.5rem;
+    width: 80px;
+    height: auto;
     object-fit: cover;
+    margin-left: 40px;
 }
 
 
@@ -328,6 +325,7 @@
 
 .playerListImage {
     object-fit: cover;
+    object-position: top;
     width: 150px;
     height: 150px;
     display: block;
