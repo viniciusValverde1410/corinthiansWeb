@@ -5,6 +5,7 @@ import Image from "next/image";
 
 export default function ShieldCard({ escudos }) {
   return (
+    <div className={styles.escudosSection}>
       <div className={styles.escudosContainer}>
         {escudos.map((e, i) => (
           <div className={styles.escudoCard} key={i} tabIndex={0}>
@@ -21,5 +22,7 @@ export default function ShieldCard({ escudos }) {
           </div>
         ))}
       </div>
+    </div>
+
   );
 }

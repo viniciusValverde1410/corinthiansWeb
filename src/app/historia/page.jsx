@@ -47,29 +47,44 @@ export default function Historia() {
 
   const escudos = [
     {
-      ano: "1910",
-      img: "/images/escudo1910.png",
-      text: "Primeiro escudo, simples e inspirado no time inglês.",
+      ano: "1913",
+      img: "/images/historyPage/escudo1.png",
+      text: "Primeiro escudo do Corinthians, com as letras “C” e “P” (de Corinthians Paulista). Simples e amador, refletia o início humilde do time da várzea.",
     },
     {
-      ano: "1919",
-      img: "/images/escudo1919.png",
-      text: "Adição dos ramos de louro e da âncora, símbolos náuticos.",
+      ano: "1914",
+      img: "/images/historyPage/escudo2.png",
+      text: "O escudo ganha moldura e mais presença visual, marcando a consolidação do clube nas competições da época.",
+    },
+    {
+      ano: "1914-1916",
+      img: "/images/historyPage/escudo3.png",
+      text: "As letras passam a ser entrelaçadas, representando mais união e identidade entre os jogadores e o clube.",
+    },
+    {
+      ano: "1916-1919",
+      img: "/images/historyPage/escudo4.png",
+      text: "As letras passam a ser entrelaçadas, representando mais união e identidade entre os jogadores e o clube.",
+    },
+    {
+      ano: "1919-1939",
+      img: "/images/historyPage/escudo5.png",
+      text: "Surge o escudo com a bandeira do Estado de São Paulo e o nome completo, simbolizando o orgulho paulista e a profissionalização do time.",
     },
     {
       ano: "1939",
-      img: "/images/escudo1939.png",
-      text: "Brasão ganha mais detalhes e a bandeira paulista.",
+      img: "/images/historyPage/escudo6.png",
+      text: "Inclui o âncora e os remos, homenagem às conquistas do clube em esportes náuticos, especialmente no remo.",
     },
     {
-      ano: "1990s",
-      img: "/images/escudo1990.png",
-      text: "Modernização do traço e tipografia.",
+      ano: "1979",
+      img: "/images/historyPage/escudo7.png",
+      text: "O escudo é modernizado com traços e cores mais marcantes, coincidindo com uma nova era do Corinthians dentro e fora de campo.",
     },
     {
       ano: "Atual",
-      img: "/images/escudoAtual.png",
-      text: "Escudo atual, símbolo máximo da tradição corinthiana.",
+      img: "/images/historyPage/escudo8.png",
+      text: "Versão atual, com estrelas que representam títulos brasileiros e mundiais, marcando a glória e a grandeza do clube.",
     },
   ];
 
