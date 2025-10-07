@@ -150,7 +150,7 @@ export default function ElencoPage() {
         <section className={styles.elencoSection}>
           <div className={styles.selectedPlayerImage}>
             <Image
-              src={convertGitHubUrlToRaw(selectedPlayer.image)}
+              src={convertGitHubUrlToRaw(selectedPlayer.imageUrl)}
               alt={selectedPlayer.name || "Jogador"}
               width={350}
               height={350}
@@ -243,7 +243,7 @@ export default function ElencoPage() {
               onClick={() => handlePlayerClick(player)}
             >
               <Image
-                src={convertGitHubUrlToRaw(player.image)}
+                src={convertGitHubUrlToRaw(player.imageUrl)}
                 alt={player.name || "Jogador"}
                 width={150}
                 height={150}
