@@ -19,8 +19,13 @@
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .loadingText {
@@ -105,36 +110,50 @@
   filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.2));
 }
 
-.decadaSection {
+.epocaSection {
   padding: 3rem 0;
   background-color: var(--branco);
   position: relative;
 }
 
-.decadaHeader {
+.epocaSection:nth-child(even) {
+  background-color: var(--cinza-claro);
+}
+
+.epocaHeader {
   text-align: left;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   padding: 0 2rem;
   position: relative;
 }
 
-.decadaTitle {
-  font-size: 2.5rem;
+.epocaTitle {
+  font-size: 2.2rem;
   font-weight: 800;
   color: var(--preto);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
 }
 
-.decadaHeader::after {
+.epocaContexto {
+  font-size: 1.1rem;
+  color: var(--cinza-escuro);
+  font-weight: 500;
+  margin: 0;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.epocaHeader::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   left: 2rem;
-  width: 45%;
-  height: 3px;
+  width: 60%;
+  height: 4px;
   background: linear-gradient(to right, var(--preto) 0%, #ff0000 100%);
+  border-radius: 2px;
 }
 
 .scrollContainer {
@@ -303,8 +322,12 @@
     width: 300px;
   }
 
-  .decadaTitle {
-    font-size: 2.2rem;
+  .epocaTitle {
+    font-size: 2rem;
+  }
+
+  .epocaContexto {
+    font-size: 1rem;
   }
 }
 
@@ -331,8 +354,12 @@
     width: 250px;
   }
 
-  .decadaTitle {
-    font-size: 2rem;
+  .epocaTitle {
+    font-size: 1.8rem;
+  }
+
+  .epocaContexto {
+    font-size: 0.95rem;
   }
 }
 
@@ -354,8 +381,12 @@
     width: 180px;
   }
 
-  .decadaTitle {
-    font-size: 1.8rem;
+  .epocaTitle {
+    font-size: 1.6rem;
+  }
+
+  .epocaContexto {
+    font-size: 0.9rem;
   }
 
   .scrollButton {
@@ -393,8 +424,12 @@
     width: 150px;
   }
 
-  .decadaTitle {
-    font-size: 1.5rem;
+  .epocaTitle {
+    font-size: 1.4rem;
+  }
+
+  .epocaContexto {
+    font-size: 0.85rem;
   }
 
   .scrollButton {
@@ -428,8 +463,12 @@
     width: 120px;
   }
 
-  .decadaTitle {
-    font-size: 1.3rem;
+  .epocaTitle {
+    font-size: 1.2rem;
+  }
+
+  .epocaContexto {
+    font-size: 0.8rem;
   }
 
   .scrollButton {
