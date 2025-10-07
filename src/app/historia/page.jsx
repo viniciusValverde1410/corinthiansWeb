@@ -10,36 +10,37 @@ export default function Historia() {
     {
       year: "1910",
       title: "Fundação e Origem",
+      image: "/images/historyPage/origem.png",
       text: "O Corinthians foi fundado em 1º de setembro de 1910 no Bom Retiro, São Paulo, por operários que buscavam criar um time representativo para o povo. O nome foi inspirado no Corinthian FC de Londres. Desde o início, o clube teve a identidade de 'time do povo', pioneiro em aceitar atletas negros e populares.",
     },
     {
       year: "1914",
       title: "Primeiro Título Paulista",
+      image: "/images/historyPage/primeiroTitulo.png",
       text: "Em 1914, o Corinthians conquistou seu primeiro título importante, o Campeonato Paulista, de forma invicta. Nas décadas seguintes, acumulou títulos e rivalizou com o Palmeiras.",
-    },
-    {
-      year: "1961",
-      title: "Início do Jejum",
-      text: "O clube entra em um longo período sem títulos, que duraria até 1977.",
     },
     {
       year: "1977",
       title: "Fim do Jejum",
+      image: "/images/historyPage/fimJejum.png",
       text: "O gol de Basílio encerra 23 anos de jejum e marca a história do clube.",
     },
     {
       year: "1982",
       title: "Democracia Corintiana",
+      image: "/images/historyPage/democracia.png",
       text: "O movimento Democracia Corintiana, liderado por Sócrates e Casagrande, revoluciona o clube e tem impacto político nacional, promovendo gestão democrática e luta contra a ditadura.",
     },
     {
       year: "2000",
       title: "Mundial de Clubes",
+      image: "/images/historyPage/mundial2000.png",
       text: "O Corinthians conquista o primeiro Mundial de Clubes da FIFA, tornando-se referência internacional.",
     },
     {
       year: "2012",
       title: "Libertadores e Bi Mundial",
+      image: "/images/historyPage/mundial2012.png",
       text: "O clube conquista a Libertadores invicto e o bicampeonato mundial, além de títulos paulistas e brasileiros, consolidando-se como potência do futebol.",
     },
   ];
