@@ -9,7 +9,35 @@ export default function LendasPage() {
   const [lendas, setLendas] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [imageErrors, setImageErrors] = useState({});
   const scrollRefs = useRef({});
+
+  const convertGitHubUrlToRaw = (url) => {
+    if (!url || url.trim() === "") return "/images/player-placeholder.png";
+
+    if (url.includes("raw.githubusercontent.com")) {
+      return url;
+    }
+
+    if (url.includes("github.com") && url.includes("/blob/")) {
+      return url
+        .replace("github.com", "raw.githubusercontent.com")
+        .replace("/blob/", "/");
+    }
+
+    if (url.startsWith("http") || url.startsWith("/")) {
+      return url;
+    }
+
+    return "/images/player-placeholder.png";
+  };
+
+  const handleImageError = (lendaId) => {
+    setImageErrors((prev) => ({
+      ...prev,
+      [lendaId]: true,
+    }));
+  };
 
   useEffect(() => {
     const fetchLendas = async () => {
@@ -182,21 +210,33 @@ export default function LendasPage() {
                 <div key={lenda.id} className={styles.lendaCard}>
                   <div className={styles.cardImageWrapper}>
                     <Image
-                      src={lenda.imageUrl || "/images/player-placeholder.png"}
-                      alt={lenda.name}
+                      src={
+                        imageErrors[lenda.id]
+                          ? "/images/player-placeholder.png"
+                          : convertGitHubUrlToRaw(lenda.imageUrl) ||
+                            "/images/player-placeholder.png"
+                      }
+                      alt={lenda.name || "Lenda do Corinthians"}
                       width={300}
                       height={350}
                       className={styles.cardImage}
-                      onError={(e) => {
-                        e.currentTarget.src = "/images/player-placeholder.png";
-                      }}
+                      onError={() => handleImageError(lenda.id)}
+                      priority={false}
                     />
-                    <div className={styles.cardNumber}>{lenda.number}</div>
+                    <div className={styles.cardNumber}>
+                      {lenda.number || "?"}
+                    </div>
                   </div>
                   <div className={styles.cardContent}>
-                    <h3 className={styles.cardName}>{lenda.name}</h3>
-                    <p className={styles.cardPosition}>{lenda.position}</p>
-                    <p className={styles.cardText}>{lenda.shortText}</p>
+                    <h3 className={styles.cardName}>
+                      {lenda.name || "Nome não informado"}
+                    </h3>
+                    <p className={styles.cardPosition}>
+                      {lenda.position || "Posição não informada"}
+                    </p>
+                    <p className={styles.cardText}>
+                      {lenda.shortText || "Descrição não disponível"}
+                    </p>
                   </div>
                 </div>
               ))}

@@ -220,7 +220,7 @@
 
 .lendaCard {
   flex: 0 0 auto;
-  width: 320px;
+  width: 420px;
   background: #ffffff;
   border-radius: 16px;
   overflow: hidden;
@@ -239,6 +239,9 @@
   width: 100%;
   height: 380px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cardImage {
@@ -246,6 +249,7 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  background: var(--cinza-claro);
 }
 
 .lendaCard:hover .cardImage {
@@ -399,7 +403,7 @@
   }
 
   .lendaCard {
-    width: 280px;
+    width: 320px;
   }
 
   .cardImageWrapper {
