@@ -132,7 +132,7 @@
   position: absolute;
   bottom: 0;
   left: 2rem;
-  width:  550px;
+  width: 45%;
   height: 3px;
   background: linear-gradient(to right, var(--preto) 0%, #ff0000 100%);
 }

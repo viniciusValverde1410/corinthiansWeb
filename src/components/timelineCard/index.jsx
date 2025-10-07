@@ -17,8 +17,8 @@ export default function TimelineCard({ timelineData }) {
             <Image
               src={item.image}
               alt={item.imageAlt}
-              width={120}
-              height={80}
+              width={220}
+              height={160}
               className={styles.timelineImage}
             />
           </div>
