@@ -1,6 +1,5 @@
 "use client";
 
-
 import { useState, useEffect, useRef } from "react";
 import styles from "./elenco.module.css";
 import Image from "next/image";
@@ -16,6 +15,25 @@ export default function ElencoPage() {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
+  // Função para converter URL do GitHub para formato raw
+  const convertGitHubUrlToRaw = (url) => {
+    if (!url) return "/images/player-placeholder.png";
+
+    // Se já for uma URL raw, retorna como está
+    if (url.includes("raw.githubusercontent.com")) {
+      return url;
+    }
+
+    // Converte URL do GitHub para formato raw
+    if (url.includes("github.com") && url.includes("/blob/")) {
+      return url
+        .replace("github.com", "raw.githubusercontent.com")
+        .replace("/blob/", "/");
+    }
+
+    // Se for uma URL local ou absoluta válida, retorna como está
+    return url;
+  };
 
   useEffect(() => {
     const fetchPlayers = async () => {
@@ -23,11 +41,12 @@ export default function ElencoPage() {
         setLoading(true);
         setError(null);
         const response = await axios.get("http://localhost:4000/players");
-       
-        const playersData = response.data.jogadores || response.data.players || [];
-       
+
+        const playersData =
+          response.data.jogadores || response.data.players || [];
+
         setPlayers(playersData);
-       
+
         if (playersData.length > 0) {
           setSelectedPlayer(playersData[0]);
         }
@@ -39,15 +58,12 @@ export default function ElencoPage() {
       }
     };
 
-
     fetchPlayers();
   }, []);
-
 
   const handlePlayerClick = (player) => {
     setSelectedPlayer(player);
   };
-
 
   const scroll = (direction) => {
     const container = scrollContainerRef.current;
@@ -58,7 +74,6 @@ export default function ElencoPage() {
           ? container.scrollLeft - scrollAmount
           : container.scrollLeft + scrollAmount;
 
-
       container.scrollTo({
         left: newScrollLeft,
         behavior: "smooth",
@@ -66,17 +81,16 @@ export default function ElencoPage() {
     }
   };
 
-
   const handleScroll = () => {
     const container = scrollContainerRef.current;
     if (container) {
       setCanScrollLeft(container.scrollLeft > 0);
       setCanScrollRight(
-        container.scrollLeft < container.scrollWidth - container.clientWidth - 10
+        container.scrollLeft <
+          container.scrollWidth - container.clientWidth - 10
       );
     }
   };
-
 
   useEffect(() => {
     const container = scrollContainerRef.current;
@@ -87,7 +101,6 @@ export default function ElencoPage() {
     }
   }, [players]);
 
-
   if (loading) {
     return (
       <main className={styles.loadingContainer}>
@@ -96,7 +109,6 @@ export default function ElencoPage() {
       </main>
     );
   }
-
 
   if (error) {
     return (
@@ -107,16 +119,12 @@ export default function ElencoPage() {
     );
   }
 
-
   return (
     <main>
       <section className={styles.heroSection}>
         <div className={styles.heroContent}>
           <div className={styles.textContent}>
-            <h1 className={styles.title}>
-              {" "}
-              Elenco atual
-            </h1>
+            <h1 className={styles.title}> Elenco atual</h1>
             <p className={styles.institutionalText}>
               Os Guerreiros do Timão, vestindo o manto sagrado, esses jogadores
               representam o verdadeiro time do povo, com raça, paixão e
@@ -138,12 +146,11 @@ export default function ElencoPage() {
         </div>
       </section>
 
-
       {selectedPlayer && (
         <section className={styles.elencoSection}>
           <div className={styles.selectedPlayerImage}>
             <Image
-              src={selectedPlayer.image || "/images/player-placeholder.png"}
+              src={convertGitHubUrlToRaw(selectedPlayer.image)}
               alt={selectedPlayer.name || "Jogador"}
               width={350}
               height={350}
@@ -154,17 +161,13 @@ export default function ElencoPage() {
             />
           </div>
 
-
           <div className={styles.infosSection}>
             <div className={styles.nameContainer}>
               <h2 className={styles.playerName}>
                 {selectedPlayer.name || "Nome indisponível"}
               </h2>
-              <p className={styles.playerPosition}>
-                {selectedPlayer.position}
-              </p>
+              <p className={styles.playerPosition}>{selectedPlayer.position}</p>
             </div>
-
 
             <div className={styles.playerInfos}>
               <p className={styles.playerInfo}>
@@ -172,7 +175,7 @@ export default function ElencoPage() {
               </p>
               {selectedPlayer.nationality && (
                 <Image
-                  src={selectedPlayer.nationality || "/images/player-placeholder.png"}
+                  src={convertGitHubUrlToRaw(selectedPlayer.nationality)}
                   alt="Nacionalidade"
                   width={50}
                   height={35}
@@ -184,16 +187,20 @@ export default function ElencoPage() {
               )}
             </div>
 
-
             <div className={styles.playerInfos}>
               <p className={styles.playerInfo}>
-                Idade: {selectedPlayer.age ? `${selectedPlayer.age} anos` : "Indisponível"}
+                Idade:{" "}
+                {selectedPlayer.age
+                  ? `${selectedPlayer.age} anos`
+                  : "Indisponível"}
               </p>
               <p className={styles.playerInfo}>
-                Data de Nascimento: {selectedPlayer.birthDate || selectedPlayer.dateOfBirth || "Indisponível"}
+                Data de Nascimento:{" "}
+                {selectedPlayer.birthDate ||
+                  selectedPlayer.dateOfBirth ||
+                  "Indisponível"}
               </p>
             </div>
-
 
             <div className={styles.playerInfos}>
               <p className={styles.playerInfo}>
@@ -206,7 +213,6 @@ export default function ElencoPage() {
           </div>
         </section>
       )}
-
 
       <div className={styles.playersListContainer}>
         <button
@@ -227,7 +233,6 @@ export default function ElencoPage() {
           </svg>
         </button>
 
-
         <div className={styles.playersList} ref={scrollContainerRef}>
           {players.map((player, index) => (
             <div
@@ -238,7 +243,7 @@ export default function ElencoPage() {
               onClick={() => handlePlayerClick(player)}
             >
               <Image
-                src={player.image || "/images/player-placeholder.png"}
+                src={convertGitHubUrlToRaw(player.image)}
                 alt={player.name || "Jogador"}
                 width={150}
                 height={150}
@@ -250,7 +255,6 @@ export default function ElencoPage() {
             </div>
           ))}
         </div>
-
 
         <button
           className={`${styles.scrollButton} ${styles.scrollButtonRight}`}
@@ -271,27 +275,27 @@ export default function ElencoPage() {
         </button>
       </div>
 
-            <section className={styles.lendasBannerSection}>
-              <div className={styles.lendasBanner}>
-                <div className={styles.bannerContainer}>
-                  <Image
-                    className={styles.bannerImage}
-                    src="/images/banner3.png"
-                    alt="Banner"
-                    layout="fill"
-                    objectFit="cover"
-                    objectPosition="center"
-                    quality={100}
-                  />
-      
-                  <h2 className={styles.bannerText2}>CONHEÇA OS ÍDOLOS DO TIMÃO</h2>
+      <section className={styles.lendasBannerSection}>
+        <div className={styles.lendasBanner}>
+          <div className={styles.bannerContainer}>
+            <Image
+              className={styles.bannerImage}
+              src="/images/banner3.png"
+              alt="Banner"
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+              quality={100}
+            />
 
-                  <Link href="/lendas">
-                    <button className={styles.lendasButton}>Saiba Mais</button>
-                  </Link>
-                </div>
-              </div>
-            </section>
+            <h2 className={styles.bannerText2}>CONHEÇA OS ÍDOLOS DO TIMÃO</h2>
+
+            <Link href="/lendas">
+              <button className={styles.lendasButton}>Saiba Mais</button>
+            </Link>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
