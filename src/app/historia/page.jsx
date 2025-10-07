@@ -90,22 +90,26 @@ export default function Historia() {
 
   const rivalidades = [
     {
-      img: "/images/palmeiras.png",
+      img: "/images/historyPage/porco.png",
+      torcidaImg: "/images/historyPage/derby.png",
       title: "Palmeiras",
       text: "O maior clássico do futebol paulista e um dos maiores do mundo: o Derby Paulista. Disputa histórica, rivalidade máxima e jogos inesquecíveis.",
     },
     {
-      img: "/images/saopaulo.png",
+      img: "/images/historyPage/tricas.png",
+      torcidaImg: "/images/historyPage/6a1.png",
       title: "São Paulo",
       text: "O Majestoso é sempre cercado de tensão e grandes decisões, com confrontos marcantes em finais estaduais e nacionais.",
     },
     {
-      img: "/images/santos.png",
+      img: "/images/historyPage/peixinho.png",
+      torcidaImg: "/images/historyPage/peixe.png",
       title: "Santos",
       text: "O Clássico Alvinegro reúne duas das maiores torcidas do estado e já decidiu títulos importantes.",
     },
     {
-      img: "/images/flamengo.png",
+      img: "/images/historyPage/urubu.png",
+      torcidaImg: "/images/historyPage/flamenguinho.png",
       title: "Flamengo",
       text: "O Clássico das Multidões: Corinthians x Flamengo é o maior duelo interestadual do Brasil, com enorme apelo nacional.",
     },
