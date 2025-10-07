@@ -36,9 +36,9 @@ export default function TitulosPage() {
   }, []);
 
   const titulosPorCategoria = {
-    estadual: titulos.filter((titulo) => titulo.category === "estadual"),
-    nacional: titulos.filter((titulo) => titulo.category === "nacional"),
-    continental: titulos.filter((titulo) => titulo.category === "continental"),
+    estadual: titulos.filter(t => t.category === 'estadual'),
+    nacional: titulos.filter(t => t.category === 'nacional'),
+    internacional: titulos.filter(t => t.category === 'internacional'),
   };
 
   if (loading) {
@@ -71,7 +71,7 @@ export default function TitulosPage() {
           </div>
           <div className={styles.imageContent}>
             <Image
-              src="/images/clubePage/escudo.png"
+              src="/images/trofeus.png"
               alt="Troféus do Corinthians"
               className={styles.escudo}
               width={180}
