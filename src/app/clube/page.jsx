@@ -153,25 +153,25 @@ export default function Clube() {
               </p>
               <div className={styles.buyButtonsContainer}>
                 <Link
-                  href="https://www.nike.com.br/camisa-nike-corinthians-i-2025-26-jogador-masculina-059012.html?cor=51"
+                  target="_blank" href="https://www.nike.com.br/camisa-nike-corinthians-i-2025-26-jogador-masculina-059012.html?cor=51"
                   className={styles.buyButton}
                 >
                   COMPRAR UNIFORME TITULAR
                 </Link>
                 <Link
-                  href="https://www.nike.com.br/camisa-nike-corinthians-ii-2025-26-jogador-masculina-058830.html?cor=ID"
+                  target="_blank" href="https://www.nike.com.br/camisa-nike-corinthians-ii-2025-26-jogador-masculina-058830.html?cor=ID"
                   className={styles.buyButton}
                 >
                   COMPRAR UNIFORME RESERVA
                 </Link>
                 <Link
-                  href="https://www.nike.com.br/camisa-corinthians-nike-total-90-iii-2025-26-jogador-masculina-059619.html?cor=ID"
+                  target="_blank" href="https://www.nike.com.br/camisa-corinthians-nike-total-90-iii-2025-26-jogador-masculina-059619.html?cor=ID"
                   className={styles.buyButton}
-                >//
+                >
                   COMPRAR TERCEIRO UNIFORME
                 </Link>
                 <Link
-                  href="https://www.nike.com.br/camisa-de-goleiro-nike-corinthians-2025-26-torcedor-pro-masculina-058813.html?cor=ID&utm_source=google&utm_medium=cpc&utm_campaign=Google_PLA_Vestu%C3%A1rio_Geral&gad_source=1&gad_campaignid=22900875082&gbraid=0AAAAADob9lODEKSp_XYfwty735XYL7QSK&gclid=CjwKCAjwi4PHBhA-EiwAnjTHudKeAg0sd_b5azclWEdYIwuTGx0FDzGk-uUSsoWzpT_Uq7WZl7-e6BoCkkAQAvD_BwE&utm_referrer=https://www.google.com/"
+                  target="_blank" href="https://www.nike.com.br/camisa-de-goleiro-nike-corinthians-2025-26-torcedor-pro-masculina-058813.html?cor=ID&utm_source=google&utm_medium=cpc&utm_campaign=Google_PLA_Vestu%C3%A1rio_Geral&gad_source=1&gad_campaignid=22900875082&gbraid=0AAAAADob9lODEKSp_XYfwty735XYL7QSK&gclid=CjwKCAjwi4PHBhA-EiwAnjTHudKeAg0sd_b5azclWEdYIwuTGx0FDzGk-uUSsoWzpT_Uq7WZl7-e6BoCkkAQAvD_BwE&utm_referrer=https://www.google.com/"
                   className={styles.buyButton}
                 >
                   COMPRAR UNIFORME GOLEIRO
