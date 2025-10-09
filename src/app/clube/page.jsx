@@ -4,6 +4,7 @@ import styles from "./clube.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { Carousel } from "antd";
+import HeroSection from "../../components/heroSection";
 import React, { useRef, useState } from "react";
 
 export default function Clube() {
@@ -112,30 +113,15 @@ export default function Clube() {
 
   return (
     <main>
-      <section className={styles.heroSection}>
-        <div className={styles.heroContent}>
-          <div className={styles.textContent}>
-            <h1 className={styles.title}> A instituição Sport Club Corinthians Paulista</h1>
-            <p className={styles.institutionalText}>
-              Uma paixão que une gerações. O Corinthians é democracia, é
+      <HeroSection
+        titulo=" A instituição Sport Club Corinthians Paulista"
+        descricao=" Uma paixão que une gerações. O Corinthians é democracia, é
               resistência, é o time do povo brasileiro. Ser corinthiano é
               carregar no peito uma chama que nunca se apaga. É vibrar com cada
               gol, sofrer com cada lance, e nunca deixar de acreditar. O Timão é
-              família, é casa, é amor eterno e incondicional.
-            </p>
-          </div>
-          <div className={styles.imageContent}>
-            <Image
-              src="/images/clubePage/escudo.png"
-              alt="Escudo do Corinthians"
-              className={styles.escudo}
-              width={180}
-              height={180}
-              priority
-            />
-          </div>
-        </div>
-      </section>
+              família, é casa, é amor eterno e incondicional."
+        imagem="/images/clubePage/escudo.png"
+      />
 
       <section className={styles.uniformsSection}>
         <div className={styles.uniformsContainer}>
@@ -153,25 +139,29 @@ export default function Clube() {
               </p>
               <div className={styles.buyButtonsContainer}>
                 <Link
-                  target="_blank" href="https://www.nike.com.br/camisa-nike-corinthians-i-2025-26-jogador-masculina-059012.html?cor=51"
+                  target="_blank"
+                  href="https://www.nike.com.br/camisa-nike-corinthians-i-2025-26-jogador-masculina-059012.html?cor=51"
                   className={styles.buyButton}
                 >
                   COMPRAR UNIFORME TITULAR
                 </Link>
                 <Link
-                  target="_blank" href="https://www.nike.com.br/camisa-nike-corinthians-ii-2025-26-jogador-masculina-058830.html?cor=ID"
+                  target="_blank"
+                  href="https://www.nike.com.br/camisa-nike-corinthians-ii-2025-26-jogador-masculina-058830.html?cor=ID"
                   className={styles.buyButton}
                 >
                   COMPRAR UNIFORME RESERVA
                 </Link>
                 <Link
-                  target="_blank" href="https://www.nike.com.br/camisa-corinthians-nike-total-90-iii-2025-26-jogador-masculina-059619.html?cor=ID"
+                  target="_blank"
+                  href="https://www.nike.com.br/camisa-corinthians-nike-total-90-iii-2025-26-jogador-masculina-059619.html?cor=ID"
                   className={styles.buyButton}
                 >
                   COMPRAR TERCEIRO UNIFORME
                 </Link>
                 <Link
-                  target="_blank" href="https://www.nike.com.br/camisa-de-goleiro-nike-corinthians-2025-26-torcedor-pro-masculina-058813.html?cor=ID&utm_source=google&utm_medium=cpc&utm_campaign=Google_PLA_Vestu%C3%A1rio_Geral&gad_source=1&gad_campaignid=22900875082&gbraid=0AAAAADob9lODEKSp_XYfwty735XYL7QSK&gclid=CjwKCAjwi4PHBhA-EiwAnjTHudKeAg0sd_b5azclWEdYIwuTGx0FDzGk-uUSsoWzpT_Uq7WZl7-e6BoCkkAQAvD_BwE&utm_referrer=https://www.google.com/"
+                  target="_blank"
+                  href="https://www.nike.com.br/camisa-de-goleiro-nike-corinthians-2025-26-torcedor-pro-masculina-058813.html?cor=ID&utm_source=google&utm_medium=cpc&utm_campaign=Google_PLA_Vestu%C3%A1rio_Geral&gad_source=1&gad_campaignid=22900875082&gbraid=0AAAAADob9lODEKSp_XYfwty735XYL7QSK&gclid=CjwKCAjwi4PHBhA-EiwAnjTHudKeAg0sd_b5azclWEdYIwuTGx0FDzGk-uUSsoWzpT_Uq7WZl7-e6BoCkkAQAvD_BwE&utm_referrer=https://www.google.com/"
                   className={styles.buyButton}
                 >
                   COMPRAR UNIFORME GOLEIRO
@@ -382,8 +372,9 @@ export default function Clube() {
 
           <div className={styles.galleryWrapper}>
             <button
-              className={`${styles.scrollButton} ${styles.leftButton} ${!canScrollLeft ? styles.disabled : ""
-                }`}
+              className={`${styles.scrollButton} ${styles.leftButton} ${
+                !canScrollLeft ? styles.disabled : ""
+              }`}
               onClick={() => scroll("left")}
               disabled={!canScrollLeft}
             >
@@ -432,8 +423,9 @@ export default function Clube() {
             </div>
 
             <button
-              className={`${styles.scrollButton} ${styles.rightButton} ${!canScrollRight ? styles.disabled : ""
-                }`}
+              className={`${styles.scrollButton} ${styles.rightButton} ${
+                !canScrollRight ? styles.disabled : ""
+              }`}
               onClick={() => scroll("right")}
               disabled={!canScrollRight}
             >
@@ -491,7 +483,6 @@ export default function Clube() {
         </div>
       </section>
 
-
       <section className={styles.mascotSection}>
         <div className={styles.titleContainer}>
           <h2 className={styles.bannerText}>MASCOTE DO CLUBE POVO</h2>
@@ -510,15 +501,20 @@ export default function Clube() {
 
           <div className={styles.mascoteTextContent}>
             <p className={styles.mascoteText}>
-              O mascote oficial do Corinthians, o Mosqueteiro, tem sua origem mais aceita e oficial em 1929.
-              Naquele ano, o Corinthians conquistou sua primeira vitória internacional em um amistoso contra o
-              Barracas, da Argentina, vencendo por 3 a 1 no Parque São Jorge. Após essa partida, o jornalista
-              Thomaz Mazzoni, do jornal "A Gazeta", escreveu uma crônica elogiando a "fibra de mosqueteiro" dos
-              jogadores corintianos, destacando a garra, a determinação e a força que o time demonstrou em campo.
-              Esse reconhecimento foi tão marcante que o personagem D'Artagnan, dos "Três Mosqueteiros" de
-              Alexandre Dumas, passou a ser associado ao Corinthians, tornando-se símbolo de coragem e luta do
-              clube. Assim, o Mosqueteiro representa oficialmente o espírito de resistência e bravura do
-              Corinthians desde essa importante vitória em 1929.
+              O mascote oficial do Corinthians, o Mosqueteiro, tem sua origem
+              mais aceita e oficial em 1929. Naquele ano, o Corinthians
+              conquistou sua primeira vitória internacional em um amistoso
+              contra o Barracas, da Argentina, vencendo por 3 a 1 no Parque São
+              Jorge. Após essa partida, o jornalista Thomaz Mazzoni, do jornal
+              "A Gazeta", escreveu uma crônica elogiando a "fibra de
+              mosqueteiro" dos jogadores corintianos, destacando a garra, a
+              determinação e a força que o time demonstrou em campo. Esse
+              reconhecimento foi tão marcante que o personagem D'Artagnan, dos
+              "Três Mosqueteiros" de Alexandre Dumas, passou a ser associado ao
+              Corinthians, tornando-se símbolo de coragem e luta do clube.
+              Assim, o Mosqueteiro representa oficialmente o espírito de
+              resistência e bravura do Corinthians desde essa importante vitória
+              em 1929.
             </p>
           </div>
         </div>
@@ -697,7 +693,6 @@ export default function Clube() {
           </div>
         </div>
       </section>
-
     </main>
   );
 }
