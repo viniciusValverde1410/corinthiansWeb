@@ -24,7 +24,7 @@
         <div className={styles.torcidaImgWrapper}>
             <Image
               src={r.torcidaImg}
-              alt={r.torcidaTitle}
+              alt="Imagem da torcida"
               width={60}
               height={60}
               className={styles.torcidaImg}

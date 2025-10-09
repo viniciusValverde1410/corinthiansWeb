@@ -2,7 +2,6 @@
 import styles from "./timelineCard.module.css";
 import Image from "next/image";
 
-
 export default function TimelineCard({ timelineData }) {
   return (
     <div className={styles.timelineContainer}>
@@ -16,7 +15,7 @@ export default function TimelineCard({ timelineData }) {
           <div className={styles.timelineImageWrapper}>
             <Image
               src={item.image}
-              alt={item.imageAlt}
+              alt="Imagem histórica"
               width={220}
               height={160}
               className={styles.timelineImage}

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import styles from "./titulos.module.css";
 import Image from "next/image";
 import axios from "axios";
+import HeroSection from "@/components/heroSection";
 
 const categorias = [
   { key: "estadual", label: "Estaduais" },
@@ -61,26 +62,10 @@ export default function TitulosPage() {
 
   return (
     <main>
-      <section className={styles.heroSection}>
-        <div className={styles.heroContent}>
-          <div className={styles.textContent}>
-            <h1 className={styles.title}>Títulos do Corinthians</h1>
-            <p className={styles.institutionalText}>
-              Veja os troféus conquistados pelo Timão, separados por categoria. Cada título representa uma história de glória e superação!
-            </p>
-          </div>
-          <div className={styles.imageContent}>
-            <Image
-              src="/images/trofeus.png"
-              alt="Troféus do Corinthians"
-              className={styles.escudo}
-              width={180}
-              height={180}
-              priority
-            />
-          </div>
-        </div>
-      </section>
+
+    <HeroSection titulo="Títulos do Corinthians" 
+    descricao="Veja os troféus conquistados pelo Timão, separados por categoria. Cada título representa uma história de glória e superação!" 
+    imagem="/images/trofeus.png" />
 
       {categorias.map((cat) => (
         <section key={cat.key} className={styles.categoriaSection}>

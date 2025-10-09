@@ -42,68 +42,6 @@
   color: #666;
 }
 
-.heroSection {
-  height: 30rem;
-  background-color: var(--branco);
-  width: 100%;
-  padding: 4rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.heroContent {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
-}
-
-.textContent {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.title {
-  font-size: 4rem;
-  font-weight: 900;
-  color: #000000;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  line-height: 1.1;
-  margin: 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.institutionalText {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  color: #444444;
-  margin: 0;
-  font-weight: 500;
-}
-
-.imageContent {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.escudo {
-  width: 420px;
-  height: auto;
-  object-fit: cover;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.15));
-}
-
-.escudo:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.2));
-}
-
 .categoriaSection {
   padding: 3rem 0;
   background-color: var(--branco);
@@ -321,40 +259,15 @@
   padding: 0 1rem;
 }
 
-@media (max-width: 1200px) {
-  .heroSection {
-    height: auto;
-    padding: 3rem 1.5rem;
-  }
-
-  .heroContent {
-    gap: 2rem;
-  }
-
-  .title {
-    font-size: 3rem;
-  }
-
-  .institutionalText {
-    font-size: 1.2rem;
-  }
-
-  .escudo {
-    width: 300px;
-  }
-
+@media (max-width: 1200px) 
+{
   .categoriaTitle {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width: 992px) {
-  .heroContent {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-  }
-
+  
   .textContent {
     align-items: center;
   }
@@ -363,35 +276,14 @@
     font-size: 2.5rem;
   }
 
-  .institutionalText {
-    font-size: 1.1rem;
-  }
-
-  .escudo {
-    width: 250px;
-  }
-
   .categoriaTitle {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 768px) {
-  .heroSection {
-    padding: 2rem 1rem;
-  }
-
   .title {
     font-size: 2rem;
-  }
-
-  .institutionalText {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
-  .escudo {
-    width: 180px;
   }
 
   .categoriaTitle {
@@ -434,21 +326,6 @@
 }
 
 @media (max-width: 576px) {
-  .heroSection {
-    padding: 1.5rem 0.5rem;
-  }
-
-  .title {
-    font-size: 1.6rem;
-  }
-
-  .institutionalText {
-    font-size: 0.9rem;
-  }
-
-  .escudo {
-    width: 150px;
-  }
 
   .categoriaTitle {
     font-size: 1.5rem;

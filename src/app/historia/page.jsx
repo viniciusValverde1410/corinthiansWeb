@@ -4,6 +4,7 @@ import Link from "next/link";
 import TimelineCard from "../../components/timelineCard";
 import ShieldCard from "../../components/shieldCard";
 import RivalidadeCard from "../../components/rivalidadeCard";
+import HeroSection from "@/components/heroSection";
 
 export default function Historia() {
   const timelineData = [
@@ -117,12 +118,9 @@ export default function Historia() {
 
   return (
     <main>
-      <section className={styles.heroSection}>
-        <div className={styles.heroContent}>
-          <div className={styles.textContent}>
-            <h1 className={styles.title}>História do time do povo</h1>
-            <p className={styles.institutionalText}>
-              115 anos de bravura e glória, nascida da força e da paixão do povo
+      <HeroSection
+        titulo="História do time do povo"
+        descricao=" 115 anos de bravura e glória, nascida da força e da paixão do povo
               de São Paulo, com uma trajetória marcada por conquistas históricas
               nos cenários nacional e internacional, episódios de coragem e
               resistência social e a dedicação incansável da maior e mais
@@ -130,20 +128,8 @@ export default function Historia() {
               símbolo eterno de identidade, superação e orgulho inabalável para
               milhões de brasileiros e admiradores do futebol ao redor do
               mundo."
-            </p>
-          </div>
-          <div className={styles.imageContent}>
-            <Image
-              src="/images/history.png"
-              alt="Operários que fundaram o Corinthians"
-              className={styles.image}
-              width={180}
-              height={180}
-              priority
-            />
-          </div>
-        </div>
-      </section>
+              imagem="/images/history.png"
+      />
 
       <section className={styles.timelineSection}>
         <div className={styles.titleContainer}>

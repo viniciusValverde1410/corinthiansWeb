@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import styles from "./lendas.module.css";
 import Image from "next/image";
 import axios from "axios";
+import HeroSection from "@/components/heroSection";
 
 export default function LendasPage() {
   const [lendas, setLendas] = useState([]);
@@ -155,28 +156,13 @@ export default function LendasPage() {
 
   return (
     <main>
-      <section className={styles.heroSection}>
-        <div className={styles.heroContent}>
-          <div className={styles.textContent}>
-            <h1 className={styles.title}>Ídolos & Lendas</h1>
-            <p className={styles.institutionalText}>
-              Conheça os grandes nomes que fizeram e fazem história vestindo o
+      <HeroSection
+        titulo="Ídolos & Lendas"
+        descricao="Conheça os grandes nomes que fizeram e fazem história vestindo o
               manto sagrado. Jogadores que eternizaram seus nomes e conquistaram
-              o coração da Fiel Torcida.
-            </p>
-          </div>
-          <div className={styles.imageContent}>
-            <Image
-              src="/images/lendas.png"
-              alt="Ídolo Socrate"
-              className={styles.escudo}
-              width={180}
-              height={180}
-              priority
-            />
-          </div>
-        </div>
-      </section>
+              o coração da Fiel Torcida."
+        imagem="/images/lendas.png"
+      />
 
       {epocasComLendas.map((epoca) => (
         <section key={epoca.id} className={styles.epocaSection}>

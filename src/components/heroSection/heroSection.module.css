@@ -49,7 +49,7 @@
 }
 
 .escudo {
-    width: 250px;
+    width: 420px;
     height: auto;
     object-fit: cover;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -59,4 +59,119 @@
 .escudo:hover {
     transform: scale(1.05);
     filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.2));
+}
+
+@media (max-width: 1200px) {
+        .heroSection {
+        height: auto;
+        padding: 3rem 1.5rem;
+    }
+
+
+    .heroContent {
+        gap: 2rem;
+    }
+
+
+    .title {
+        font-size: 3rem;
+    }
+
+
+    .institutionalText {
+        font-size: 1.2rem;
+    }
+
+
+    .escudo {
+        width: 300px;
+    }
+}
+
+@media (max-width: 992px) {
+    .heroContent {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .institutionalText {
+        font-size: 1.1rem;
+    }
+
+    .escudo {
+        width: 250px;
+    }
+
+    .infosSection {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        padding: 2rem 1rem;
+    }
+
+
+    .title {
+        font-size: 2rem;
+    }
+
+
+    .institutionalText {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+
+    .escudo {
+        width: 180px;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .heroSection {
+        padding: 1.5rem 0.5rem;
+    }
+
+
+    .title {
+        font-size: 1.6rem;
+    }
+
+
+    .institutionalText {
+        font-size: 0.9rem;
+    }
+
+
+    .escudo {
+        width: 150px;
+    }
+
+}
+
+@media (max-width: 400px ) {
+.title {
+        font-size: 1.4rem;
+    }
+
+
+    .institutionalText {
+        font-size: 0.85rem;
+    }
+
+
+    .escudo {
+        width: 120px;
+    }
 }

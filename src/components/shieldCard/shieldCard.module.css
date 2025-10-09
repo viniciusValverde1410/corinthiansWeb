@@ -15,7 +15,7 @@
     padding: 2rem;
     justify-content: center;
     align-items: center;
-    width: 70%;
+    width: 90%;
 }
 
 .escudoCard {
@@ -23,7 +23,7 @@
     border-radius: 5px;
     box-shadow: 0 2px 12px #2c2c2e0d;
     padding: 1.2rem 1.2rem 1.2rem 1.2rem;
-    width: 220px;
+    width: 300px;
     height: 375px;
     display: flex;
     flex-direction: column;
@@ -39,7 +39,6 @@
     box-shadow: 0 6px 24px #2c2c2e22;
     transform: translateY(-4px) scale(1.03);
 }
-
 
 .escudoImg {
     width: 185px;
