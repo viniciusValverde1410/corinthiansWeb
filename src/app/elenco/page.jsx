@@ -13,6 +13,7 @@ export default function ElencoPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const scrollContainerRef = useRef(null);
+  const playerRefs = useRef({});
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
@@ -64,6 +65,21 @@ export default function ElencoPage() {
 
   const handlePlayerClick = (player) => {
     setSelectedPlayer(player);
+    
+    const container = scrollContainerRef.current;
+    const playerElement = playerRefs.current[player.id];
+    
+    if (container && playerElement) {
+      const containerRect = container.getBoundingClientRect();
+      const playerRect = playerElement.getBoundingClientRect();
+      
+      const scrollLeft = container.scrollLeft + (playerRect.left - containerRect.left);
+      
+      container.scrollTo({
+        left: scrollLeft,
+        behavior: "smooth",
+      });
+    }
   };
 
   const scroll = (direction) => {
@@ -223,6 +239,7 @@ export default function ElencoPage() {
           {players.map((player, index) => (
             <div
               key={player.id || index}
+              ref={(el) => (playerRefs.current[player.id] = el)}
               className={`${styles.player} ${
                 selectedPlayer?.id === player.id ? styles.playerActive : ""
               }`}

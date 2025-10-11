@@ -189,7 +189,7 @@
 
 
 .scrollButtonLeft {
-    left: 2rem;
+    left: 7rem;
 }
 
 
@@ -245,8 +245,10 @@
 
 
 .playerActive {
-    transform: scale(1.3);
+    transform: scale(1.275  );
     z-index: 6;
+    object-position: top;
+    object-fit: cover;
 }
 
 .playerListImage {
