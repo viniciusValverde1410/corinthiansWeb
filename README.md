@@ -130,6 +130,7 @@ corinthiansWeb/
 │   └── components/               # Componentes reutilizáveis
 │       ├── footer/               # Rodapé
 │       ├── header/               # Cabeçalho/Menu
+│       ├── heroSection/          # Hero section padronzizada
 │       ├── rivalidadeCard/       # Card de rivalidades
 │       ├── shieldCard/           # Card dos escudos
 │       └── timelineCard/         # Card da timeline
