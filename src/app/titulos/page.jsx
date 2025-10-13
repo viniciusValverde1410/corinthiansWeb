@@ -17,6 +17,22 @@ export default function TitulosPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const convertGitHubUrlToRaw = (url) => {
+    if (!url) return "/images/trofeu-placeholder.png";
+
+    if (url.includes("raw.githubusercontent.com")) {
+      return url;
+    }
+
+    if (url.includes("github.com") && url.includes("/blob/")) {
+      return url
+        .replace("github.com", "raw.githubusercontent.com")
+        .replace("/blob/", "/");
+    }
+
+    return url;
+  };
+
   useEffect(() => {
     const fetchTitulos = async () => {
       try {
@@ -80,13 +96,13 @@ export default function TitulosPage() {
                 <div className={styles.cardTop}>
                   <div className={styles.cardImageWrapper}>
                     <Image
-                      src={titulo.imageUrl || "/images/trofeu-placeholder.png"}
+                      src={convertGitHubUrlToRaw(titulo.imageUrl)}
                       alt={titulo.name}
                       width={300}
                       height={350}
                       className={styles.cardImage}
                       onError={(e) => {
-                        e.currentTarget.src = "/images/player-placeholder.png";
+                        e.currentTarget.src = "/images/trofeu-placeholder.png";
                       }}
                     />
                   </div>
@@ -101,76 +117,6 @@ export default function TitulosPage() {
                   </div>
                 </div>
 
-                <div className={styles.cardGallery}>
-                  <div className={styles.galleryItem}>
-                    {titulo.imageTeam1 ? (
-                      <>
-                        <Image
-                          src={titulo.imageTeam1}
-                          alt="Comemoração 1"
-                          width={300}
-                          height={200}
-                          className={styles.galleryImage}
-                        />
-                        {titulo.imageTeamText1 && (
-                          <div className={styles.galleryOverlay}>
-                            <p className={styles.galleryText}>{titulo.imageTeamText1}</p>
-                          </div>
-                        )}
-                      </>
-                    ) : (
-                      <div className={styles.galleryPlaceholder}>
-                        <p className={styles.placeholderText}>Imagem não disponível</p>
-                      </div>
-                    )}
-                  </div>
-
-                  <div className={styles.galleryItem}>
-                    {titulo.imageTeam2 ? (
-                      <>
-                        <Image
-                          src={titulo.imageTeam2}
-                          alt="Comemoração 2"
-                          width={300}
-                          height={200}
-                          className={styles.galleryImage}
-                        />
-                        {titulo.imageTeamText2 && (
-                          <div className={styles.galleryOverlay}>
-                            <p className={styles.galleryText}>{titulo.imageTeamText2}</p>
-                          </div>
-                        )}
-                      </>
-                    ) : (
-                      <div className={styles.galleryPlaceholder}>
-                        <p className={styles.placeholderText}>Imagem não disponível</p>
-                      </div>
-                    )}
-                  </div>
-
-                  <div className={styles.galleryItem}>
-                    {titulo.imageTeam3 ? (
-                      <>
-                        <Image
-                          src={titulo.imageTeam3}
-                          alt="Comemoração 3"
-                          width={300}
-                          height={200}
-                          className={styles.galleryImage}
-                        />
-                        {titulo.imageTeamText3 && (
-                          <div className={styles.galleryOverlay}>
-                            <p className={styles.galleryText}>{titulo.imageTeamText3}</p>
-                          </div>
-                        )}
-                      </>
-                    ) : (
-                      <div className={styles.galleryPlaceholder}>
-                        <p className={styles.placeholderText}>Imagem não disponível</p>
-                      </div>
-                    )}
-                  </div>
-                </div>
               </div>
             ))}
           </div>
