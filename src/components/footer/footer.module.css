@@ -18,7 +18,8 @@
 }
 
 .socials a:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
+    transition: 1s;
 }
 
 .footer p {
