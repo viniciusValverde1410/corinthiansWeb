@@ -829,6 +829,7 @@
 
     .heroButtons {
         flex-direction: row;
+        text-align: center;
     }
 
     .heroButton {
