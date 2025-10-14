@@ -38,7 +38,7 @@ export default function TitulosPage() {
       try {
         setLoading(true);
         setError(null);
-        const response = await axios.get("http://localhost:4000/titles");
+        const response = await axios.get("https://corinthiansbackend.onrender.com/titles");
         const titulosData = response.data.titles || response.data.titulos || [];
         console.log("Dados dos títulos:", titulosData);
         setTitulos(titulosData);

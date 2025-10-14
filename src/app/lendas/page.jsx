@@ -45,7 +45,7 @@ export default function LendasPage() {
       try {
         setLoading(true);
         setError(null);
-        const response = await axios.get("http://localhost:4000/legends");
+        const response = await axios.get("https://corinthiansbackend.onrender.com/legends");
 
         const lendasData = response.data.legends || response.data.lendas || [];
 
