@@ -539,7 +539,7 @@ export default function Clube() {
                   width={600}
                   height={400}
                   quality={90}
-                  objectFit="cover"
+                  style={{ objectFit: "cover" }}
                 />
               </div>
               <div className={styles.centerInfo}>
@@ -583,7 +583,7 @@ export default function Clube() {
                   width={600}
                   height={400}
                   quality={90}
-                  objectFit="cover"
+                  style={{ objectFit: "cover" }}
                 />
               </div>
               <div className={styles.centerInfo}>
@@ -680,8 +680,8 @@ export default function Clube() {
               className={styles.bannerImage}
               src="/images/clubePage/banner2.png"
               alt="Banner"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
               quality={100}
             />
 
